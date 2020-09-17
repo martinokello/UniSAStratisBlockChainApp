@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Mooc Provider Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+    <div style="padding:10px !important;">
+        <div class="jumbotron">
+            <h3>Mooc Provider Home Page</h3>
+            <p class="lead">UniSA - Mooc Project engages Employers, Governments, Potential Employees, Course Providers, Recruitment Agents via Block Chain technology.</p>
+            <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Mooc App UniSA Project by <a href="MartinLayooinc.com">MartinLayooInc &copy;</a></h2>
+                <p>
+                    The site consists of functions from Administration of Site and Content to the core functions of catering for Employer, Employee and Course Provider engagement to meet a common objective with ease of interactions anchored by blockchain Technology - Stratis.
+                </p>
+                <p><a class="btn btn-default" href="@Url.Content("~/Account/Login")">Log in &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Get Involved</h2>
+                <p>Are you an Employer reaching out for suitable Candidates, or perhaps a potential employee; with block chain enabled transactions, the world is open to venture in.</p>
+                <p><a class="btn btn-default" href="@Url.Content("~/Home/Index")">Learn more &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Register and Login To Use</h2>
+                <p>You need to register and get involved in the daily usage of core functions of the app, superbly built with security at the core of concept.</p>
+                <p><a class="btn btn-default" href="@Url.Content("~/Account/Register")">Register</a></p>
+            </div>
+        </div>
+    </div>

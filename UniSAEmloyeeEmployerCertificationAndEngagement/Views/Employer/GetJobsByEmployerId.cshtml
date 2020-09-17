@@ -1,0 +1,81 @@
+﻿@model IEnumerable<UniSAEmloyeeEmployerCertificationAndEngagement.Models.JobViewModel>
+
+@{
+    ViewBag.Title = "GetJobsByEmployerId";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div style="padding:10px !important;">
+        <h2>Get Jobs By Job Id</h2>
+
+        <p>
+            @Html.ActionLink("Create New Job", "EmployerCreateJob")
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.JobId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.JobCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.JobTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NumberOfPositions)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmployerId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IsActive)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateCreated)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateUpdated)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                using (Html.BeginForm("DeleteJob", "Employer", new { employerId = item.EmployerId, jobId = item.JobId }, FormMethod.Post))
+                {
+                    @Html.HiddenFor(modelItem => item.EmployerId)
+                <tr>
+                    <td>
+                        @Html.HiddenFor(modelItem => item.JobId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.JobCode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.JobTitle)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NumberOfPositions)
+                    </td>
+                    <td>
+                        @((ViewBag.EmployerIdList as List<SelectListItem>).First(e=> e.Value == item.EmployerId.ToString()).Text)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IsActive)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateCreated)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateUpdated)
+                    </td>
+                    <td>
+                        <input type="submit" value="Delete Job" />
+                    </td>
+                </tr>
+            }
+        }
+
+        </table>
+    </div>

@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSA316Engine", "..\RSA316Enginge\RSA316Engine.csproj", "{77CC200F-6104-4683-A301-D3BE2A853895}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniSA.Services", "..\UniSA.Services\UniSA.Services.csproj", "{8FD5B594-3D13-445D-B964-E9A8DF7BBF8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniSA.DataAccess", "..\UniSA.DataAccess\UniSA.DataAccess.csproj", "{2633627F-CD81-4EF0-9C1B-B7576AB61DBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniSA.Domain", "..\UniSA.Domain\UniSA.Domain.csproj", "{1A8B2791-4272-46BF-9161-8DEBB709262A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniSA.Tests", "..\UniSA.Tests\UniSA.Tests.csproj", "{C6AA8D00-4C21-4465-95B4-696C94E88BB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniSAEmloyeeEmployerCertificationAndEngagement", "UniSAEmloyeeEmployerCertificationAndEngagement.csproj", "{ED74D3C0-105F-4304-BDF3-DFE3274452C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77CC200F-6104-4683-A301-D3BE2A853895}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77CC200F-6104-4683-A301-D3BE2A853895}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77CC200F-6104-4683-A301-D3BE2A853895}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77CC200F-6104-4683-A301-D3BE2A853895}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FD5B594-3D13-445D-B964-E9A8DF7BBF8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FD5B594-3D13-445D-B964-E9A8DF7BBF8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FD5B594-3D13-445D-B964-E9A8DF7BBF8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FD5B594-3D13-445D-B964-E9A8DF7BBF8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2633627F-CD81-4EF0-9C1B-B7576AB61DBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2633627F-CD81-4EF0-9C1B-B7576AB61DBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2633627F-CD81-4EF0-9C1B-B7576AB61DBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2633627F-CD81-4EF0-9C1B-B7576AB61DBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A8B2791-4272-46BF-9161-8DEBB709262A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A8B2791-4272-46BF-9161-8DEBB709262A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A8B2791-4272-46BF-9161-8DEBB709262A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A8B2791-4272-46BF-9161-8DEBB709262A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6AA8D00-4C21-4465-95B4-696C94E88BB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6AA8D00-4C21-4465-95B4-696C94E88BB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6AA8D00-4C21-4465-95B4-696C94E88BB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6AA8D00-4C21-4465-95B4-696C94E88BB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED74D3C0-105F-4304-BDF3-DFE3274452C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED74D3C0-105F-4304-BDF3-DFE3274452C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED74D3C0-105F-4304-BDF3-DFE3274452C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED74D3C0-105F-4304-BDF3-DFE3274452C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C3652B36-6852-455F-AFFB-19F77089BE93}
+	EndGlobalSection
+EndGlobal

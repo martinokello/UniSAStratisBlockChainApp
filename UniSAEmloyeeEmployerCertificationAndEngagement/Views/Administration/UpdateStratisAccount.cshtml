@@ -1,0 +1,25 @@
+﻿@model UniSAEmloyeeEmployerCertificationAndEngagement.Models.StratisAccountViewModel
+@{
+    ViewBag.Title = "UpdateStratisAccountView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="FormDiv" style="padding:10px !important;">
+    <h2>Update Stratis Account View</h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        Html.RenderPartial("_StratisAccountView");
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-2">
+                <input type="submit" value="Select" name="Select" class="btn btn-default" />
+            </div>
+            <div class="col-md-2">
+                <input type="submit" value="Update" name="Update" class="btn btn-default" />
+            </div>
+        </div>
+    }
+</div>

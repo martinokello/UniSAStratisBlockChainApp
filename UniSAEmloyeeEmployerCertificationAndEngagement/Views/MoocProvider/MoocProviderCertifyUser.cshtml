@@ -1,0 +1,88 @@
+﻿@model UniSAEmloyeeEmployerCertificationAndEngagement.Models.CandidateMicroCredentialCourseViewModel
+
+@{
+    ViewBag.Title = "MoocProviderCertifyUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div style="padding:10px !important;">
+    <h2>MoocProvider Certify User</h2>
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>Candidate Micro Credential Course Verification</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.CandidateId, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("CandidateId", ViewBag.CandidateIdList as List<SelectListItem>, htmlAttributes: new { @class = "select-wrapper col-md-10" })
+            @Html.ValidationMessageFor(model => model.CandidateId, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.MicroCredentialId, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("MicroCredentialId", ViewBag.MicroCredentialIdList as List<SelectListItem>, htmlAttributes: new { @class = " select-wrapper col-md-10" })
+            @Html.ValidationMessageFor(model => model.MicroCredentialId, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label("MicroCredCourseId", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("CandidateMicroCredentialCourseId", ViewBag.CandidateMicroCredentialCourseIdList as List<SelectListItem>, htmlAttributes: new { @class = " select-wrapper col-md-10" })
+            @Html.ValidationMessageFor(model => model.CandidateMicroCredentialCourseId, "", new { @class = "text-danger" })
+        </div>
+    </div>        
+    <div class="form-group">
+        @Html.LabelFor(model => model.MicroCredentialBadgeId, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("MicroCredentialBadgeId", ViewBag.MicroCredentialBadgesIdList as List<SelectListItem>, htmlAttributes: new { @class = "select-wrapper col-md-10" })
+            @Html.ValidationMessageFor(model => model.MicroCredentialBadgeId, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Candidate.EmailAddress, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Candidate.EmailAddress, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.HasPassed, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <div class="checkbox">
+                @Html.EditorFor(model => model.HasPassed)
+                @Html.ValidationMessageFor(model => model.HasPassed, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+    @*
+        <div class="form-group">
+            @Html.LabelFor(model => model.HashOfMine, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.HashOfMine, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.HashOfMine, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    *@
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Certify Candidate" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+</div>

@@ -1,0 +1,112 @@
+﻿@model UniSAEmloyeeEmployerCertificationAndEngagement.Models.SelectDeleteJobViewModel
+
+@{
+    ViewBag.Title = "EmployerUpdateJob";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div id="FormDiv" style="padding:10px !important;">
+    <h2>Employer Update Job</h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>JobViewModel</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.JobId, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("JobId", ViewBag.JobsIdList as List<SelectListItem>, htmlAttributes: new { @class = " select-wrapper col-md-10" })
+            @Html.ValidationMessageFor(model => model.JobId, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.JobCode, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.JobCode, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.JobCode, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.JobTitle, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.JobTitle, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.JobTitle, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.JobDescription, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextAreaFor(model => model.JobDescription, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.JobDescription, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.NumberOfPositions, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.NumberOfPositions, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.NumberOfPositions, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.EmployerId, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("EmployerId", ViewBag.EmployerIdList as List<SelectListItem>, htmlAttributes: new { @class = " select-wrapper col-md-10" })
+            @Html.ValidationMessageFor(model => model.EmployerId, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-check row">
+        <span class="col-md-offset-2"></span>
+        <input type="checkbox" class="col-md-2 form-check" name="QualificationsRequired" id="QualificationsRequired" style="text-align:right !important;" />
+        <label class="col-md-10 form-label" for="QualificationsRequired" style="font-weight:bolder !important;">QualificationsRequired</label>
+    </div>
+    <div id="divMicroCredentialId" class="form-group">
+        @Html.LabelFor(model => model.MicroCredentialId, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("MicroCredentialId", ViewBag.MicroCredentialIdList as List<SelectListItem>, htmlAttributes: new { @class = " select-wrapper col-md-10" })
+            @Html.ValidationMessageFor(model => model.MicroCredentialId, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-check row">
+        <span class="col-md-offset-2"></span>
+        <input type="checkbox" class="col-md-2 form-check" name="IsActive" id="IsActive" style="text-align:right !important;" />
+        <label class="col-md-10 form-label" for="IsActive" style="font-weight:bolder !important;">IsActive</label>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.DateCreated, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.DateCreated, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.DateCreated, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.DateUpdated, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.DateUpdated, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.DateUpdated, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-2">
+            <input type="submit" name="Select" value="Select" class="btn btn-default" />
+        </div>
+        <div class="col-md-2">
+            <input type="submit" name="Update" value="Update" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+</div>

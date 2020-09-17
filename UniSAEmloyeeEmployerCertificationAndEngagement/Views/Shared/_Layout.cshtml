@@ -1,0 +1,941 @@
+﻿<!DOCTYPE HTML>
+<!--
+    UniSA Mooc App by HTML5 UP
+    html5up.net
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>University Of South Africa, Mooc, Employee &amp; Employer Engagement App</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="~/Content/bootstrap.css" />
+    <link rel="stylesheet" href="~/assets/css/main.css" />
+    <link rel="stylesheet" href="~/Content/jquery-ui.css" />
+</head>
+<body class="single is-preload">
+    @{
+        var mainMenuOn = "";
+    }
+    <style type="text/css">
+        nav#mainMenu li a {
+            font-weight: bolder !important;
+            font-size: 0.7em !important;
+            line-height: 3.5em !important;
+            padding: 5px !important;
+        }
+
+        header > h1 {
+            font-weight: bolder !important;
+            font-size: 1.1em !important;
+            line-height: 5em !important;
+        }
+
+        header#header {
+            height: 5.1em !important;
+            line-height: 5.5em !important;
+        }
+
+        .nav li a {
+            font-weight: bolder !important;
+        }
+
+        .nav li {
+            font-weight: bolder !important;
+            padding-right: 5px;
+        }
+
+        .navlistOut {
+            background-color: #silver !important;
+            color: gray !important;
+            font-weight: bolder !important;
+        }
+
+        .navlistIn {
+            background-color: black !important;
+            color: white !important;
+            font-weight: bolder !important;
+        }
+
+        .selectedMainMenu {
+            background-color: black !important;
+            color: orangered !important;
+            font-weight: bolder !important;
+        }
+        section#sidebar ul{
+            list-style:none !important;
+            padding-bottom:5px !important;
+        }
+        section#sidebar {
+            background-color: silver;
+            color: black;
+            padding-left: 10px;
+            padding-top: 10px;
+            margin-right: auto;
+            width: 100% !important;
+        }
+
+        section#sidebar #intro h3 {
+            font-size: 1.3em;
+            font-weight: 500;
+        }
+    </style>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <div id="linkToMainMenu">
+            <input type="button" value="mobile menu" class="btn-primary" style="width:100% !important;padding: 5px !important;" />
+        </div>
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="index.html">UniSA Mooc App</a></h1>
+            <nav class="links" id="mainMenu">
+                <ul>
+                    @if (User.IsInRole("Administrator"))
+                    {
+                        <li><a href="~/Candidate/Index?AddminOtherRole=Candidate">Employee Candidate</a></li>
+
+                        <li><a href="~/Employer/Index?AddminOtherRole=Employer">Employer</a></li>
+
+                        <li><a href="~/MoocProvider/Index?AddminOtherRole=MoocProvider">Mooc Provider</a></li>
+
+                        <li><a href="~/AccreditationBody/Index?AddminOtherRole=AccreditationBody">Accreditation Body</a></li>
+
+                        <li><a href="~/EndorsementBody/Index?AddminOtherRole=EndorsementBody">Endorsement Body</a></li>
+
+                        <li><a href="~/RecruitmentAgent/Index?AddminOtherRole=RecruitmentAgent">Recruitment Agent</a></li>
+
+                        <li><a href="~/Government/Index?AddminOtherRole=Government">Government</a></li>
+                    }
+                    else
+                    {
+                        <li><a href="~/Candidate/Index">Employee Candidate</a></li>
+                        <li><a href="~/Employer/Index">Employer</a></li>
+                        <li><a href="~/MoocProvider/Index">Mooc Provider</a></li>
+                        <li><a href="~/AccreditationBody/Index">Accreditation Body</a></li>
+                        <li><a href="~/EndorsementBody/Index">Endorsement Body</a></li>
+                        <li><a href="~/RecruitmentAgent/Index">Recruitment Agent</a></li>
+                        <li><a href="~/Government/Index">Government</a></li>
+                    }
+
+                    @{
+                        if (User.Identity.IsAuthenticated)
+                        {
+                            <li><a href="~/Account/LogOff">Log Out</a></li>
+                        }
+                        else
+                        {
+                            <li><a href="~/Account/Login">Log In</a></li>
+                        }
+                    }
+                </ul>
+            </nav>
+            <nav class="main">
+                <ul>
+                    <li class="search">
+                        <a class="fa-search" href="#search">Search</a>
+                        <form id="search" method="get" action="#">
+                            <input type="text" name="query" placeholder="Search" />
+                        </form>
+                    </li>
+                    <li class="menu">
+                        <a class="fa-bars" href="#menu">Menu</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Menu -->
+        <section id="menu">
+
+            <!-- Search -->
+            <section>
+                <form class="search" method="get" action="#">
+                    <input type="text" name="query" placeholder="Search" />
+                </form>
+            </section>
+
+            <!-- Links -->
+            <section>
+                <ul class="links">
+                    <li>
+                        <div class="row">
+                            <div class="col-lg-12" style="text-align:center !important;">
+                                <img src="~/images/BlockChain.jpg" alt="blockchain" style="border-radius:5px !important; width:100%; !important; height:auto;" />
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Actions -->
+            <section>
+                <ul class="actions stacked">
+                    @if (!User.Identity.IsAuthenticated)
+                    {
+
+                        <li><a href="~/Account/Login" class="button large fit">Log In</a></li>
+                    }
+                    else
+                    {
+
+                        <li><a href="~/Account/LogOff" class="button large fit">Log Out</a></li>
+                    }
+                </ul>
+            </section>
+
+        </section>
+
+        <!-- Main -->
+        <div id="main">
+            <!-- Post -->
+            <article class="post">
+                <header>
+                    <div class="title">
+                        <h2><a href="#">University Of South Africa, Mooc, Employee &amp; Employer Engagement</a></h2>
+                    </div>
+                    <div class="meta">
+                        <time class="published" datetime="2015-11-01">@DateTime.Now.ToString("MMM dd, yyyy")</time>
+                        <a href="#" class="author"><span class="name">@User.Identity.Name.Split(new char[] { '@' })[0]</span><img src="images/avatar.jpg" alt="" /></a>
+                        @if (User.IsInRole("Administrator"))
+                        {
+                            <div><a href="~/Administration/Index"><em>Administer site</em></a></div>
+                        }
+                    </div>
+                </header>
+                <div>
+                    <div>
+                        <!--secondary menu-->
+                        @if (User.IsInRole("Administrator"))
+                        {
+                            mainMenuOn = "Administrator";
+                            <h3>@mainMenuOn</h3>
+                            <nav class="navbar navbar-default">
+                                <div class="container-fluid">
+                                    <ul class="nav navbar-nav">
+                                        <li><a href="~/Administration/SelectStratisAccount">Manage Stratis Accounts</a></li>
+                                        <li><a href="~/Administration/CreateReadUpdateAccreditationBody">Manage Accreditation Bodies</a></li>
+                                        <li><a href="~/Administration/CreateReadUpdateEndorsementBody">Manage Endorsement Bodies</a></li>
+                                        <li><a href="~/Administration/CreateReadUpdateAddress">Manage Addresses</a></li>
+                                        <li><a href="~/Administration/CreateReadUpdateCandidate">Manage Candidates</a></li>
+                                        <li><a href="~/Administration/CreateReadUpdateEmployer">Manage Employers</a></li>
+                                        <li><a href="~/Administration/CreateReadUpdateJob">Manage Jobs</a></li>
+                                        <li><a href="~/Administration/CreateReadUpdateMicroCredential">Manage Micro Credentials</a></li>
+                                        <li><a href="~/Administration/CreateReadUpdateMoocProvider">Manage Mooc Providers</a></li>
+                                        <li><a href="~/Administration/CreateReadUpdateUserMicroCredentialBadge">Manage MicroCredential Badges</a></li>
+                                        <li><a href="~/Administration/CreateReadUpdateUserRecruitmentAgent">Manage Recruitment Agencies</a></li>
+                                        <li><a href="~/Administration/CreateReadUpdateUserGovernment">Manage Governments</a>
+                                        <li><a href="~/Administration/AssignUserToRole">Manage User Roles</a></li>
+                                        @{
+                                            if (User.Identity.IsAuthenticated)
+                                            {
+                                                <li><a href="~/Account/LogOff">Log Out</a></li>
+                                            }
+                                            else
+                                            {
+                                                <li><a href="~/Account/Login">Log In</a></li>
+                                            }
+                                        }
+                                    </ul>
+                                </div>
+                            </nav>
+                        }
+
+                        @if (User.IsInRole("AccreditationBody") && !User.IsInRole("Administrator") || (!string.IsNullOrEmpty(ViewBag.AddminOtherRole) && ViewBag.AddminOtherRole.Equals("AccreditationBody")))
+                        {
+                            mainMenuOn = "AccreditationBody";
+                            <h3>@mainMenuOn</h3>
+                            <nav class="navbar navbar-default">
+                                <div class="container-fluid">
+                                    <ul class="nav navbar-nav">
+                                        <li><a href="~/AccreditationBody/SelectAccreditMicroCredentialCourse">Accredit MicroCredential Course</a></li>
+                                        <li><a href="~/AccreditationBody/SelectEndorseMicroCredentialCourse">Endorse MicroCredential Course</a></li>
+                                        @{
+                                            if (User.Identity.IsAuthenticated)
+                                            {
+                                                <li><a href="~/Account/LogOff">Log Out</a></li>
+                                            }
+                                            else
+                                            {
+                                                <li><a href="~/Account/Login">Log In</a></li>
+                                            }
+                                        }
+                                    </ul>
+                                </div>
+                            </nav>
+                        }
+                        else if (User.IsInRole("EndorsementBody") && !User.IsInRole("Administrator") || (!string.IsNullOrEmpty(ViewBag.AddminOtherRole) && ViewBag.AddminOtherRole.Equals("EndorsementBody")))
+                        {
+                            mainMenuOn = "EndorsementBody";
+                            <h3>@mainMenuOn</h3>
+                            <nav class="navbar navbar-default">
+                                <div class="container-fluid">
+                                    <ul class="nav navbar-nav">
+                                        <li><a href="~/EndorsementBody/SelectEndorseMicroCredentialCourse">Endorse MicroCredential Course</a></li>
+                                        @{
+                                            if (User.Identity.IsAuthenticated)
+                                            {
+                                                <li><a href="~/Account/LogOff">Log Out</a></li>
+                                            }
+                                            else
+                                            {
+                                                <li><a href="~/Account/Login">Log In</a></li>
+                                            }
+                                        }
+                                    </ul>
+                                </div>
+                            </nav>
+                        }
+                        else if (User.IsInRole("Candidate") && !User.IsInRole("Administrator") || (!string.IsNullOrEmpty(ViewBag.AddminOtherRole) && ViewBag.AddminOtherRole.Equals("Candidate")))
+                        {
+                            mainMenuOn = "Candidate";
+                            <h3>@mainMenuOn</h3>
+                            <nav class="navbar navbar-default">
+                                <div class="container-fluid">
+                                    <ul class="nav navbar-nav">
+                                        <li><a href="~/Candidate/EnroleForMicroCredential">Enrole For MicroCredential Course</a></li>
+                                        <li><a href="~/Candidate/ViewUserMicroCredentialBadges">View Your MicroCredential Badges</a></li>
+                                        <li><a href="~/Candidate/GetCandidateDigitalBadgesByEmail?candidateEmail=@User.Identity.Name">Candidate Digital Badges</a></li>
+                                        <li><a href="~/Candidate/ListJobs">View Jobs</a></li>
+                                        <li><a href="~/Candidate/ValidateUserMicroCredential">Verify User MicroCredential</a></li>
+                                        @{
+                                            if (User.Identity.IsAuthenticated)
+                                            {
+                                                <li><a href="~/Account/LogOff">Log Out</a></li>
+                                            }
+                                            else
+                                            {
+                                                <li><a href="~/Account/Login">Log In</a></li>
+                                            }
+                                        }
+                                    </ul>
+                                </div>
+                            </nav>
+                        }
+                        else if (User.IsInRole("MoocProvider") && !User.IsInRole("Administrator") || (!string.IsNullOrEmpty(ViewBag.AddminOtherRole) && ViewBag.AddminOtherRole.Equals("MoocProvider")))
+                        {
+                            mainMenuOn = "MoocProvider";
+
+                            <h3>@mainMenuOn</h3>
+                            <nav class="navbar navbar-default">
+                                <div class="container-fluid">
+                                    <ul class="nav navbar-nav">
+                                        <li><a href="~/MoocProvider/InsertMicroCredential">Create MicroCredential</a></li>
+                                        <li><a href="~/MoocProvider/CreateUserMicroCredentialBadge">Create MicroCredential Course Badge</a></li>
+                                        <li><a href="~/MoocProvider/EnroleUserToCourse">Enrole Candidate To MicroCredential Course</a></li>
+                                        <li><a href="~/MoocProvider/ViewUserMicroCredentialBadges">View User's MicroCredential Badges</a></li>
+                                        <li><a href="~/MoocProvider/MoocProviderCertifyUser">Certify User</a></li>
+                                        <li><a href="~/MoocProvider/ValidateCandidateMicroCredential">Validate Candidate Credentials</a></li>
+                                        @{
+                                            if (User.Identity.IsAuthenticated)
+                                            {
+                                                <li><a href="~/Account/LogOff">Log Out</a></li>
+                                            }
+                                            else
+                                            {
+                                                <li><a href="~/Account/Login">Log In</a></li>
+                                            }
+                                        }
+                                    </ul>
+                                </div>
+                            </nav>
+                        }
+                        else if (User.IsInRole("RecruitmentAgency") && !User.IsInRole("Administrator") || (!string.IsNullOrEmpty(ViewBag.AddminOtherRole) && ViewBag.AddminOtherRole.Equals("RecruitmentAgent")))
+                        {
+
+                            mainMenuOn = "RecruitmentAgency";
+                            <h3>@mainMenuOn</h3>
+                            <nav class="navbar navbar-default">
+                                <div class="container-fluid">
+                                    <ul class="nav navbar-nav">
+
+                                        <li><a href="~/RecruitmentAgent/Index">Recruitment Agent</a></li>
+                                        <li><a href="~/RecruitmentAgent/CreateReadUpdateUserRecruitmentAgent">Create/Update Recruitment Agency</a></li>
+                                        @{
+                                            if (User.Identity.IsAuthenticated)
+                                            {
+                                                <li><a href="~/Account/LogOff">Log Out</a></li>
+                                            }
+                                            else
+                                            {
+                                                <li><a href="~/Account/Login">Log In</a></li>
+                                            }
+                                        }
+                                    </ul>
+                                </div>
+                            </nav>
+                        }
+                        else if (User.IsInRole("Government") && !User.IsInRole("Administrator") || (!string.IsNullOrEmpty(ViewBag.AddminOtherRole) && ViewBag.AddminOtherRole.Equals("Government")))
+                        {
+
+                            mainMenuOn = "Government";
+                            <h3>@mainMenuOn</h3>
+                            <nav class="navbar navbar-default">
+                                <div class="container-fluid">
+                                    <ul class="nav navbar-nav">
+                                        <li><a href="~/Government/Index">Government</a></li>
+                                        <li><a href="~/Government/Index">Government</a></li>
+                                        @{
+                                            if (User.Identity.IsAuthenticated)
+                                            {
+                                                <li><a href="~/Account/LogOff">Log Out</a></li>
+                                            }
+                                            else
+                                            {
+                                                <li><a href="~/Account/Login">Log In</a></li>
+                                            }
+                                        }
+                                    </ul>
+                                </div>
+                            </nav>
+                        }
+                        else if (User.IsInRole("Employer") && !User.IsInRole("Administrator") || (!string.IsNullOrEmpty(ViewBag.AddminOtherRole) && ViewBag.AddminOtherRole.Equals("Employer")))
+                        {
+                            mainMenuOn = "Employer";
+
+                            <h3>@mainMenuOn</h3>
+                            <nav class="navbar navbar-default">
+                                <div class="container-fluid">
+                                    <ul class="nav navbar-nav">
+                                        <li><a href="~/Employer/EmployerJobList">List Of Employers &amp; Their Jobs</a></li>
+                                        <li><a href="~/Employer/EmployerCreateJob">Create Job</a></li>
+                                        <li><a href="~/Employer/UpdateEmployerJob">Update Job</a></li>
+                                        <li><a href="~/Employer/ValidateCandidateMicroCredential">Validate Candidate Credentials</a></li>
+                                        @{
+                                            if (User.Identity.IsAuthenticated)
+                                            {
+                                                <li><a href="~/Account/LogOff">Log Out</a></li>
+                                            }
+                                            else
+                                            {
+                                                <li><a href="~/Account/Login">Log In</a></li>
+                                            }
+                                        }
+                                    </ul>
+                                </div>
+                            </nav>
+                        }
+                    </div>
+                    <div style="background-color:#eeeeee;">
+                        @{Html.RenderPartial("_BlockChainBannerImages"); }
+                        <div style="text-align:center !important;">
+                            <hr />
+                        </div>
+                        <div id="contentBody">
+                            @RenderBody()
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <footer>
+                    <ul class="stats">
+                        <li><a href="#">General</a></li>
+                        <li><a href="#" class="icon solid fa-heart">28</a></li>
+                        <li><a href="#" class="icon solid fa-comment">128</a></li>
+                    </ul>
+                </footer>
+            </article>
+
+        </div>
+        <!-- Posts List -->
+        <section id="sidebar">
+            <ul class="posts">
+                <ul>
+                    @if (User.IsInRole("Administrator"))
+                    {
+                        <li>
+                            <article>
+                                <header>
+                                    <h3><a href='@Url.Content("~/Candidate/Index?AddminOtherRole=Candidate")'>Employee Candidate</a></h3>
+                                    <time class="published" datetime="@DateTime.Now.ToString("dd-MMM-yyyy")">@DateTime.Now.ToString("dd-MMM-yyyy")</time>
+                                </header>
+                                <a href='@Url.Content("~/Candidate/Index?AddminOtherRole=Candidate")' class="image"><img src="/images/pic08.jpg" alt="" /></a>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <header>
+                                    <h3><a href='@Url.Content("~/Employer/Index?AddminOtherRole=Employer")'>Employer</a></h3>
+                                    <time class="published" datetime="@DateTime.Now.ToString("dd-MMM-yyyy")">@DateTime.Now.ToString("dd-MMM-yyyy")</time>
+                                </header>
+                                <a href='@Url.Content("~/Employer/Index?AddminOtherRole=Employer")' class="image"><img src="/images/pic08.jpg" alt="" /></a>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <header>
+                                    <h3><a href='@Url.Content("~/MoocProvider/Index?AddminOtherRole=MoocProvider")'>Mooc Provider</a></h3>
+                                    <time class="published" datetime="@DateTime.Now.ToString("dd-MMM-yyyy")">@DateTime.Now.ToString("dd-MMM-yyyy")</time>
+                                </header>
+                                <a href='@Url.Content("~/MoocProvider/Index?AddminOtherRole=MoocProvider")' class="image"><img src="/images/pic09.jpg" alt="" /></a>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <header>
+                                    <h3><a href='@Url.Content("~/AccreditationBody/Index?AddminOtherRole=AccreditationBody")'>Accreditation Body</a></h3>
+                                    <time class="published" datetime="@DateTime.Now.ToString("dd-MMM-yyyy")">@DateTime.Now.ToString("dd-MMM-yyyy")</time>
+                                </header>
+                                <a href='@Url.Content("~/AccreditationBody/Index?AddminOtherRole=AccreditationBody")' class="image"><img src="/images/pic10.jpg" alt="" /></a>
+                            </article>
+                        </li>
+
+                        <li>
+                            <article>
+                                <header>
+                                    <h3><a href='@Url.Content("~/EndorsementBody/Index?AddminOtherRole=EndorsementBody")'>Endorsement Body</a></h3>
+                                    <time class="published" datetime="@DateTime.Now.ToString("dd-MMM-yyyy")">@DateTime.Now.ToString("dd-MMM-yyyy")</time>
+                                </header>
+                                <a href='@Url.Content("~/EndorsementBody/Index?AddminOtherRole=EndorsementBody")' class="image"><img src="/images/pic08.jpg" alt="" /></a>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <header>
+                                    <h3><a href='@Url.Content("~/RecruitmentAgent/Index?AddminOtherRole=RecruitmentAgent")'>Recruitment Agent</a></h3>
+                                    <time class="published" datetime="@DateTime.Now.ToString("dd-MMM-yyyy")">@DateTime.Now.ToString("dd-MMM-yyyy")</time>
+                                </header>
+                                <a href='@Url.Content("~/RecruitmentAgent/Index?AddminOtherRole=RecruitmentAgent")' class="image"><img src="/images/pic08.jpg" alt="" /></a>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <header>
+                                    <h3><a href='@Url.Content("~/Government/Index?AddminOtherRole=Government")'>Governments</a></h3>
+                                    <time class="published" datetime="@DateTime.Now.ToString("dd-MMM-yyyy")">@DateTime.Now.ToString("dd-MMM-yyyy")</time>
+                                </header>
+                                <a href='@Url.Content("~/Government/Index?AddminOtherRole=Government")' class="image"><img src="/images/pic09.jpg" alt="" /></a>
+                            </article>
+                        </li>
+                    }
+                    else
+                    {
+                        <li>
+                            <article>
+                                <header>
+                                    <h3><a href='@Url.Content("~/Candidate/Index")'>Employee Candidate</a></h3>
+                                    <time class="published" datetime="@DateTime.Now.ToString("dd-MMM-yyyy")">@DateTime.Now.ToString("dd-MMM-yyyy")</time>
+                                </header>
+                                <a href='@Url.Content("~/Candidate/Index")' class="image"><img src="/images/pic08.jpg" alt="" /></a>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <header>
+                                    <h3><a href='@Url.Content("~/Employer/Index")'>Employer</a></h3>
+                                    <time class="published" datetime="@DateTime.Now.ToString("dd-MMM-yyyy")">@DateTime.Now.ToString("dd-MMM-yyyy")</time>
+                                </header>
+                                <a href='@Url.Content("~/Employer/Index")' class="image"><img src="/images/pic08.jpg" alt="" /></a>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <header>
+                                    <h3><a href='@Url.Content("~/MoocProvider/Index")'>Mooc Provider</a></h3>
+                                    <time class="published" datetime="@DateTime.Now.ToString("dd-MMM-yyyy")">@DateTime.Now.ToString("dd-MMM-yyyy")</time>
+                                </header>
+                                <a href='@Url.Content("~/MoocProvider/Index")' class="image"><img src="/images/pic09.jpg" alt="" /></a>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <header>
+                                    <h3><a href='@Url.Content("~/AccreditationBody/Index")'>Accreditation Body</a></h3>
+                                    <time class="published" datetime="@DateTime.Now.ToString("dd-MMM-yyyy")">@DateTime.Now.ToString("dd-MMM-yyyy")</time>
+                                </header>
+                                <a href='@Url.Content("~/AccreditationBody/Index")' class="image"><img src="/images/pic10.jpg" alt="" /></a>
+                            </article>
+                        </li>
+
+                        <li>
+                            <article>
+                                <header>
+                                    <h3><a href='@Url.Content("~/EndorsementBody/Index")'>Endorsement Body</a></h3>
+                                    <time class="published" datetime="@DateTime.Now.ToString("dd-MMM-yyyy")">@DateTime.Now.ToString("dd-MMM-yyyy")</time>
+                                </header>
+                                <a href='@Url.Content("~/EndorsementBody/Index")' class="image"><img src="/images/pic08.jpg" alt="" /></a>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <header>
+                                    <h3><a href='@Url.Content("~/RecruitmentAgent/Index")'>Recruitment Agent</a></h3>
+                                    <time class="published" datetime="@DateTime.Now.ToString("dd-MMM-yyyy")">@DateTime.Now.ToString("dd-MMM-yyyy")</time>
+                                </header>
+                                <a href='@Url.Content("~/RecruitmentAgent/Index")' class="image"><img src="/images/pic08.jpg" alt="" /></a>
+                            </article>
+                        </li>
+                        <li>
+                            <article>
+                                <header>
+                                    <h3><a href='@Url.Content("~/Government/Index")'>Governments</a></h3>
+                                    <time class="published" datetime="@DateTime.Now.ToString("dd-MMM-yyyy")">@DateTime.Now.ToString("dd-MMM-yyyy")</time>
+                                </header>
+                                <a href='@Url.Content("~/Government/Index")' class="image"><img src="/images/pic09.jpg" alt="" /></a>
+                            </article>
+                        </li>
+                    }
+                </ul>
+            </ul>
+        </section>
+        <!-- Footer -->
+        <section id="footer">
+            <ul class="icons">
+                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+                <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+            <p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+        </section>
+
+    </div>
+
+    <script src="@Url.Content("~/Scripts/jquery-3.4.1.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/assets/js/breakpoints.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/assets/js/util.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/assets/js/main.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery-ui.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/assets/js/bootstrap.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/assets/js/jquery.validate.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/assets/js/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+    <!-- Scripts -->
+    @RenderSection("scripts", required: false)
+
+    <script type="text/javascript">
+        function AdaptResizeWindowsMenus(){
+            if (window.matchMedia("(max-width: 1300px)").matches) {
+                // The viewport is less than 768 pixels wide
+                //alert("This is a mobile device.");
+                $('div#linkToMainMenu').css('display', 'block !mportant');
+                $('section#sidebar').css('display', 'block');
+            } else {
+                // The viewport is at least 768 pixels wide
+                //alert("This is a tablet or desktop.");
+                $('section#sidebar').css('display', 'none');
+                $('div#linkToMainMenu').css('display', 'none');
+            }
+        }
+        $(document).ready(function () {
+            @{
+                var IsActiveExists = "false";
+                var IsEndorsedExists = "false";
+                var IsAccreditedExists = "false";
+                var QualificationsRequiredExists = "false";
+            }
+            $('div#linkToMainMenu').click(function () {
+                $('html, body').animate({
+                    scrollTop: ($('section#sidebar').offset().top)
+                }, 1000);
+            })
+            //Adapt resize  window menus
+            if (!window.matchMedia("(max-width: 767px)").matches) {
+                AdaptResizeWindowsMenus();
+            }
+            $(window).resize(function () {
+                AdaptResizeWindowsMenus();
+            });
+            @if (Request.Url.AbsoluteUri.Contains("/Index") || Request.Url.PathAndQuery.Equals(Url.Content("~/")))
+            {
+                @Html.Raw(@"$('html, body').animate({
+                    scrollTop: ($('nav.navbar:first').offset().top)
+                }, 2000);")
+            }
+            else
+            {
+                @Html.Raw(@"$('html, body').animate({
+                    scrollTop: ($('div#contentBody').offset().top)
+                }, 2000);")
+            }
+            $('nav li').hover(function () {
+                $(this).removeClass('navlistOut');
+                $(this).addClass('navlistIn');
+            }, function () {
+                $(this).removeClass('navlistIn');
+                $(this).addClass('navlistOut');
+        });
+
+            switch ("@mainMenuOn") {
+                case "Employer":
+                    var empLi = $('nav#mainMenu li > a[href*="/Employer/"]').parent('li');
+                    $(empLi).addClass('selectedMainMenu');
+                    $(empLi).children('a').addClass('selectedMainMenu');
+                    break;
+                case "Candidate":
+                    var empLi = $('nav#mainMenu li > a[href*="/Candidate/"]').parent('li');
+                    $(empLi).addClass('selectedMainMenu');
+                    $(empLi).children('a').addClass('selectedMainMenu');
+                    break;
+                case "MoocProvider":
+                    var empLi = $('nav#mainMenu li > a[href*="/MoocProvider/"]').parent('li');
+                    $(empLi).addClass('selectedMainMenu');
+                    $(empLi).children('a').addClass('selectedMainMenu');
+                    break;
+                case "AccreditationBody":
+                    var empLi = $('nav#mainMenu li > a[href*="/AccreditationBody/"]').parent('li');
+                    $(empLi).addClass('selectedMainMenu');
+                    $(empLi).children('a').addClass('selectedMainMenu');
+                    break;
+                case "EndorsementBody":
+                    var empLi = $('nav#mainMenu li > a[href*="/EndorsementBody/"]').parent('li');
+                    $(empLi).addClass('selectedMainMenu');
+                    $(empLi).children('a').addClass('selectedMainMenu');
+                    break;
+                case "RecruitmentAgent":
+                    var empLi = $('nav#mainMenu li > a[href*="/RecruitmentAgent/"]').parent('li');
+                    $(empLi).addClass('selectedMainMenu');
+                    $(empLi).children('a').addClass('selectedMainMenu');
+                    break;
+                case "Government":
+                    var empLi = $('nav#mainMenu li > a[href*="/Government/"]').parent('li');
+                    $(empLi).addClass('selectedMainMenu');
+                    $(empLi).children('a').addClass('selectedMainMenu');
+                    break;
+                default:
+                    var empLi = $('nav#mainMenu li > a[href*="/Candidate/"]').parent('li');
+                    $(empLi).addClass('selectedMainMenu');
+                    $(empLi).children('a').addClass('selectedMainMenu');
+                    break;
+            }
+            $('body').find('input[type="datetime"]').each(function (index, el) {
+                $(el).attr('type', 'text').datepicker({ "dateFormat": 'yy/mm/dd' }).datepicker("setDate", new Date());
+            });
+
+            var jdivMicro = $('body').find('div#divMicroCredentialId');
+            if (jdivMicro) {
+                $(jdivMicro).hide();
+            }
+            $('body').find('input[type="checkbox"]#QualificationsRequired').click(function (e) {
+                let checked = $(this).val();
+                if (checked === "false") {
+                    jdivMicro.slideDown(500);
+                } else {
+                    jdivMicro.slideUp(500);
+                }
+            });
+                @{
+                    if (Model != null)
+                    {
+
+                        if (Model.GetType().Equals(typeof(Enumerable)))
+                        {
+                            if (Model.Any())
+                            {
+                                var props = Model.First().GetType().GetProperties();
+
+                                foreach (var n in props)
+                                {
+                                    if (n.PropertyType.Name.Equals("Boolean") && n.Name.Equals("IsEndorsed"))
+                                    {
+                                        IsEndorsedExists = "true";
+                                    }
+                                    if (n.PropertyType.Name.Equals("Boolean") && n.Name.Equals("IsAccredited"))
+                                    {
+                                        IsAccreditedExists = "true";
+                                    }
+                                    if (n.PropertyType.Name.Equals("Boolean") && n.Name.Equals("IsActive"))
+                                    {
+                                        IsActiveExists = "true";
+                                    }
+                                    if (n.PropertyType.Name.Equals("Boolean") && n.Name.Equals("QualificationsRequired"))
+                                    {
+                                        QualificationsRequiredExists = "true";
+                                    }
+                                }
+                            }
+                        }
+                        else
+                        {
+                            var props = Model.GetType().GetProperties();
+
+                            foreach (var n in props)
+                            {
+                                if (n.PropertyType.Name.Equals("Boolean") && n.Name.Equals("IsEndorsed"))
+                                {
+                                    IsEndorsedExists = "true";
+                                }
+                                if (n.PropertyType.Name.Equals("Boolean") && n.Name.Equals("IsAccredited"))
+                                {
+                                    IsAccreditedExists = "true";
+                                }
+                                if (n.PropertyType.Name.Equals("Boolean") && n.Name.Equals("IsActive"))
+                                {
+                                    IsActiveExists = "true";
+                                }
+                                if (n.PropertyType.Name.Equals("Boolean") && n.Name.Equals("QualificationsRequired"))
+                                {
+                                    QualificationsRequiredExists = "true";
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+                $('body').find('input[type="checkbox"]').each(function (index, el) {
+                    $(this).val("off");
+                });
+
+                @if (IsEndorsedExists == "true" && Model.IsEndorsed)
+                {
+                    @Html.Raw("$(\"input[name='IsEndorsed']\").attr('checked','true');");
+                }
+                else {
+
+                    @Html.Raw("$(\"input[name='IsEndorsed']\").removeAttr('checked');");
+                }
+
+                @if (IsAccreditedExists == "true" && Model.IsAccredited)
+                {
+                    @Html.Raw("$(\"input[name='IsAccredited']\").attr('checked','true');");
+                }
+                else {
+
+                    @Html.Raw("$(\"input[name='IsAccredited']\").removeAttr('checked');");
+                }
+
+                @if (IsActiveExists == "true" && Model.IsActive)
+                {
+                    @Html.Raw("$(\"input[name='IsActive']\").attr('checked','true');");
+                }
+                else {
+
+                    @Html.Raw("$(\"input[name='IsActive']\").removeAttr('checked');");
+                }
+
+                @if (QualificationsRequiredExists == "true" && Model.QualificationsRequired)
+                {
+                    @Html.Raw("$(\"input[name='QualificationsRequired']\").attr('checked','true');");
+                }
+                else {
+
+                    @Html.Raw("$(\"input[name='QualificationsRequired']\").removeAttr('checked');");
+                }
+
+                $('input[type="checkbox"]').click(function () {
+                    var checked = $(this).val();
+                    if (checked === "on" || checked === "true") {
+                        $(this).val("false");
+                    }
+                    else {
+                        $(this).val("true");
+                    }
+                });
+
+                    var form = $('div#FormDiv > form');
+
+                    if (form != 'undefined') {
+
+                        var action = form.attr('action');
+
+                        form.find('input[type="submit"]').click(function () {
+                            form.find('input[type="checkbox"]').each(function (index, el) {
+                                var checked = $(this).val();
+                                if (checked === "on" || checked === "true") {
+                                    $(this).val("true");
+                                }
+                                else {
+                                    $(this).val("false");
+                                }
+                                });
+                                var btn = $(this);
+                                switch (btn.attr("name")) {
+                                    case "Select":
+                                        (function ($) {
+                                $.fn.turnOffValidation = function (frm) {
+                                                var settings = frm.validate().settings;
+
+                                    for (var ruleIndex in settings.rules) {
+                                                    delete settings.rules[ruleIndex];
+                                                }
+                                            };
+                                        })(jQuery);
+                            $(this).turnOffValidation(jQuery(form));
+                                        if (action.indexOf('CreateReadUpdate') > -1) {
+                                            action = action.replace('CreateReadUpdate', 'Select');
+                                        }
+                                        else if (action.indexOf('SelectDelete') > -1) {
+                                            action = action.replace('SelectDelete', 'Select');
+                                        }
+                                        else if (action.indexOf('Insert') > -1) {
+                                            action = action.replace('Insert', 'Select');
+                                        }
+                                        else if (action.indexOf('Delete') > -1) {
+                                            action = action.replace('Delete', 'Select');
+                                        }
+                                        else if (action.indexOf('Update') > -1) {
+                                            action = action.replace('Update', 'Select');
+                                        }
+                                        break;
+                                    case "Delete":
+                                        (function ($) {
+                                $.fn.turnOffValidation = function (frm) {
+                                                var settings = frm.validate().settings;
+
+                                    for (var ruleIndex in settings.rules) {
+                                                    delete settings.rules[ruleIndex];
+                                                }
+                                            };
+                                        })(jQuery);
+                            $(this).turnOffValidation(jQuery(form));
+                                        if (action.indexOf('CreateReadUpdate') > -1) {
+                                            action = action.replace('CreateReadUpdate', 'Delete');
+                                        }
+                                        else if (action.indexOf('SelectDelete') > -1) {
+                                            action = action.replace('SelectDelete', 'Delete');
+                                        }
+                                        else if (action.indexOf('Select') > -1) {
+                                            action = action.replace('Select', 'Delete');
+                                        }
+                                        else if (action.indexOf('Update') > -1) {
+                                            action = action.replace('Update', 'Delete');
+                                        }
+                                        else if (action.indexOf('Insert') > -1) {
+                                            action = action.replace('Insert', 'Delete');
+                                        }
+                                        break;
+                                    case "Update":
+                                        if (action.indexOf('CreateReadUpdate') > -1) {
+                                            action = action.replace('CreateReadUpdate', 'Update');
+                                        }
+                                        else if (action.indexOf('SelectDelete') > -1) {
+                                            action = action.replace('SelectDelete', 'Update');
+                                        }
+                                        else if (action.indexOf('Select') > -1) {
+                                            action = action.replace('Select', 'Update');
+                                        }
+                                        else if (action.indexOf('Delete') > -1) {
+                                            action = action.replace('Delete', 'Update');
+                                        }
+                                        else if (action.indexOf('Insert') > -1) {
+                                            action = action.replace('Insert', 'Update');
+                                        }
+                                        break;
+                                    case "Insert":
+                                        if (action.indexOf('CreateReadUpdate') > -1) {
+                                            action = action.replace('CreateReadUpdate', 'Insert');
+                                        }
+                                        else if (action.indexOf('SelectDelete') > -1) {
+                                            action = action.replace('SelectDelete', 'Insert');
+                                        }
+                                        else if (action.indexOf('Select') > -1) {
+                                            action = action.replace('Select', 'Insert');
+                                        }
+                                        else if (action.indexOf('Delete') > -1) {
+                                            action = action.replace('Delete', 'Insert');
+                                        }
+                                        else if (action.indexOf('Update') > -1) {
+                                            action = action.replace('Update', 'Insert');
+                                        }
+                                        break;
+                                }
+                                form.attr('action', action);
+                                form.submit();
+                            });
+                        }
+                    });
+    </script>
+
+</body>
+</html>

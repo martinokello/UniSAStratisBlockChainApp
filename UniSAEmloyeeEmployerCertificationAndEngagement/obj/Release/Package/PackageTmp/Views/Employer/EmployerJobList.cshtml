@@ -1,0 +1,43 @@
+﻿@model IEnumerable<UniSAEmloyeeEmployerCertificationAndEngagement.Models.EmployerJobsViewModel>
+
+@{
+    ViewBag.Title = "EmployerJobList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>EmployerJobList</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>Employer Name</th>
+        <th>Job Title</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.Employer.EmployerName
+            </td>
+            <td>
+                @foreach (var job in item.Jobs)
+                {
+                    var employerLink = $"~/Employer/GetJobsByEmployerId/{item.Employer.EmployerId}";
+                    <table>
+                        <tr>
+                            <td>@job.JobTitle</td>
+                            <td>
+                                <a href='@Url.Content(employerLink)'>View</a>
+                            </td>
+
+                        </tr>
+                    </table>
+                }
+            </td>
+        </tr>
+    }
+
+</table>

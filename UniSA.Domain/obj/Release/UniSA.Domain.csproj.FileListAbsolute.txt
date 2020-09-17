@@ -1,0 +1,11 @@
+D:\PhonePics\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\bin\Release\UniSA.Domain.dll.config
+D:\PhonePics\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\bin\Release\UniSA.Domain.dll
+D:\PhonePics\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\bin\Release\UniSA.Domain.pdb
+D:\PhonePics\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\bin\Release\EntityFramework.dll
+D:\PhonePics\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\bin\Release\EntityFramework.SqlServer.dll
+D:\PhonePics\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\bin\Release\EntityFramework.xml
+D:\PhonePics\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\bin\Release\EntityFramework.SqlServer.xml
+D:\PhonePics\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\obj\Release\UniSA.Domain.csproj.CoreCompileInputs.cache
+D:\PhonePics\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\obj\Release\UniSA.Domain.csproj.CopyComplete
+D:\PhonePics\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\obj\Release\UniSA.Domain.dll
+D:\PhonePics\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\obj\Release\UniSA.Domain.pdb

@@ -31,3 +31,15 @@ D:\PhonePics\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\ob
 D:\PhonePics\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\obj\Debug\UniSA.Domain.dll
 D:\PhonePics\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\obj\Debug\UniSA.Domain.pdb
 D:\PhonePics\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\obj\Debug\UniSA.Domain.csprojAssemblyReference.cache
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\bin\Debug\UniSA.Domain.dll.config
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\bin\Debug\UniSA.Domain.dll
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\bin\Debug\UniSA.Domain.pdb
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\bin\Debug\EntityFramework.dll
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\bin\Debug\EntityFramework.xml
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\obj\Debug\UniSA.Domain.csprojAssemblyReference.cache
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\obj\Debug\UniSA.Domain.csproj.CoreCompileInputs.cache
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\obj\Debug\UniSA.Domain.csproj.CopyComplete
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\obj\Debug\UniSA.Domain.dll
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\obj\Debug\UniSA.Domain.pdb

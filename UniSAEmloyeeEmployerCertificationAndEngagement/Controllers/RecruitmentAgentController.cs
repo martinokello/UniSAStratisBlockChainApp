@@ -18,7 +18,7 @@ using UniSAEmloyeeEmployerCertificationAndEngagement.Models;
 
 namespace UniSAEmloyeeEmployerCertificationAndEngagement.Controllers
 {
-    [Authorize(Roles = "RecruitmentAgent,Administrator")]
+    [Authorize(Roles = "RecruitmentAgency,Administrator")]
     public class RecruitmentAgentController : Controller
     {
         UnitOfWork _unitOfWork;

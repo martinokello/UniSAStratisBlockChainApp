@@ -41,16 +41,3 @@ D:\PhonePics\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\o
 D:\PhonePics\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\obj\Debug\RSA316Engine.csproj.CopyComplete
 D:\PhonePics\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\obj\Debug\RSA316Engine.dll
 D:\PhonePics\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\obj\Debug\RSA316Engine.pdb
-D:\PhonePics\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\obj\Debug\RSA316Engine.csprojAssemblyReference.cache
-C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\bin\Debug\RSA316Engine.dll.config
-C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\bin\Debug\RSA316Engine.dll
-C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\bin\Debug\RSA316Engine.pdb
-C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\bin\Debug\EntityFramework.dll
-C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\bin\Debug\EntityFramework.SqlServer.dll
-C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\bin\Debug\EntityFramework.xml
-C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\bin\Debug\EntityFramework.SqlServer.xml
-C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\obj\Debug\RSA316Engine.csprojAssemblyReference.cache
-C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\obj\Debug\RSA316Engine.csproj.CoreCompileInputs.cache
-C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\obj\Debug\RSA316Engine.csproj.CopyComplete
-C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\obj\Debug\RSA316Engine.dll
-C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\obj\Debug\RSA316Engine.pdb

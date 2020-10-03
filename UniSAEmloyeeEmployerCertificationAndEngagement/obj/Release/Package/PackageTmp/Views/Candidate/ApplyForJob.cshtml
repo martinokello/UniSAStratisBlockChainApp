@@ -60,7 +60,13 @@
                 </dd>
 
                 <dt>
-                    @Html.DisplayNameFor(model => model.IsActive)
+                    <td>
+                        <div class="form-check row">
+                            <span class="col-md-offset-2"></span>
+                            <input type="checkbox" class="col-md-2 form-check" name="IsActive" id="IsActive" style="text-align:right !important;" readonly />
+                            <label class="col-md-10 form-label" for="IsActive" style="font-weight:bolder !important;">IsActive</label>
+                        </div>
+                    </td>
                 </dt>
 
                 <dd>

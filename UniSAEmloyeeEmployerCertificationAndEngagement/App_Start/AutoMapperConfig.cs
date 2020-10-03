@@ -54,7 +54,10 @@ namespace UniSAEmloyeeEmployerCertificationAndEngagement.App_Start
                 cfg.CreateMap<UserMicroCredentialBadges, UserMicroCredentialBadgesViewModel>(); 
                 cfg.CreateMap<UserMicroCredentialBadges, UserMicroCredentialBadgesViewModel>().ReverseMap();
                 cfg.CreateMap<UserMicroCredentialBadges, SelectDeleteMicroCredentialUserViewModel>();
-                cfg.CreateMap<UserMicroCredentialBadges, SelectDeleteMicroCredentialUserViewModel>().ReverseMap(); 
+                cfg.CreateMap<UserMicroCredentialBadges, SelectDeleteMicroCredentialUserViewModel>().ReverseMap();
+                cfg.CreateMap<UserMicroCredentialBadges, SelectDeleteMicroCredentialBadgeViewModel>();
+                cfg.CreateMap<UserMicroCredentialBadges, SelectDeleteMicroCredentialBadgeViewModel>().ReverseMap();
+
                 cfg.CreateMap<UserMicroCredentialBadges, MicroCredentialBadgeViewModel>();
                 cfg.CreateMap<MicroCredentialBadgeViewModel, UserMicroCredentialBadges>().ReverseMap();
                 cfg.CreateMap<MoocProvider, MoocProviderViewModel>();

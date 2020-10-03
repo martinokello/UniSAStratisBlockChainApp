@@ -1103,12 +1103,16 @@ namespace UniSAEmloyeeEmployerCertificationAndEngagement.Controllers
             ViewBag.MicroCredentialIdList = GetMicroCredentialIds();
             if (ModelState.IsValid)
             {
-                var user = _repositoryEndPointService.GetCandidateByEmail(User.Identity.Name);
+                var user = _unitOfWork.CandidateRepository.GetById(microCredentialBadgeViewModel.CandidateId);
                 if (user != null)
                 {
                     UserMicroCredentialBadges[] microCredentialBadges = _repositoryEndPointService.GetUserMicroCredentialBadgesById(user.CandidateId);
                     var microCredentialBadge = microCredentialBadges.FirstOrDefault(m => m.MicroCredentialBadgeId == microCredentialBadgeViewModel.MicroCredentialBadgeId);
-                    return View(microCredentialBadge);
+                    var mapper = AutoMapperConfig.Configure();
+
+                    SelectDeleteMicroCredentialBadgeViewModel retrievedMicroCredentialBadgeViewModel = mapper.Map<UserMicroCredentialBadges, SelectDeleteMicroCredentialBadgeViewModel>(microCredentialBadge);
+                    ModelState.Clear();
+                    return View("SelectDeleteUserMicroCredentialBadge", retrievedMicroCredentialBadgeViewModel);
                 }
             }
             return View("SelectDeleteUserMicroCredentialBadge", microCredentialBadgeViewModel);
@@ -1129,7 +1133,7 @@ namespace UniSAEmloyeeEmployerCertificationAndEngagement.Controllers
             ViewBag.MicroCredentialIdList = GetMicroCredentialIds();
             if (ModelState.IsValid)
             {
-                var user = _repositoryEndPointService.GetCandidateByEmail(User.Identity.Name);
+                var user = _repositoryEndPointService.GetCandidateById(microCredentialBadgeViewModel.CandidateId);
                 if (user != null)
                 {
                     UserMicroCredentialBadges[] microCredentialBadges = _repositoryEndPointService.GetUserMicroCredentialBadgesById(user.CandidateId);

@@ -30,9 +30,11 @@
             </th>
             <th></th>
         </tr>
-
-        @foreach (var item in Model)
-        {
+        @{ 
+            var ind = 1;
+            foreach (var item in Model)
+            {
+                var formDivId = "FormDiv" + @ind.ToString();
             <tr>
                 @Html.HiddenFor(modelItem => item.JobId)
                 <td>
@@ -45,10 +47,20 @@
                     @Html.DisplayFor(modelItem => item.NumberOfPositions)
                 </td>
                 <td>
-                    @((ViewBag.EmployerIdList as List<SelectListItem>).First(e=> e.Value == item.EmployerId.ToString()).Text)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.IsActive)
+                            @((ViewBag.EmployerIdList as List<SelectListItem>).First(e => e.Value == item.EmployerId.ToString()).Text)
+                        </td>
+        
+                        <td>
+                            <div id='@formDivId'>
+                                <form>
+
+                                    <div class="form-check row">
+                                        <span class="col-md-offset-2"></span>
+                                        <input type="checkbox" class="col-md-2 form-check" name="IsActive" id="IsActive" style="text-align:right !important;" readonly />
+                                        <label class="col-md-10 form-label" for="IsActive" style="font-weight:bolder !important;">IsActive</label>
+                                    </div>
+                                </form>
+                            </div>
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.DateUpdated)
@@ -57,6 +69,9 @@
                     @Html.ActionLink("Apply For Job", "ApplyForJob", new { id = item.JobId })
                 </td>
             </tr>
+
+                ind++;
+            }
         }
 
     </table>

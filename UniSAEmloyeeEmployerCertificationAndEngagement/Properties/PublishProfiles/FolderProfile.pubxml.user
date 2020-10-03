@@ -428,13 +428,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/08/2018 12:18:16</publishTime>
     </File>
     <File Include="bin/RSA316Engine.dll">
-      <publishTime>09/04/2020 08:47:27</publishTime>
+      <publishTime>09/26/2020 23:42:39</publishTime>
     </File>
     <File Include="bin/RSA316Engine.dll.config">
       <publishTime>08/01/2020 05:20:58</publishTime>
     </File>
     <File Include="bin/RSA316Engine.pdb">
-      <publishTime>09/04/2020 08:47:27</publishTime>
+      <publishTime>09/26/2020 23:42:39</publishTime>
     </File>
     <File Include="bin/System.AppContext.dll">
       <publishTime>08/12/2020 23:52:57</publishTime>
@@ -773,19 +773,19 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/04/2020 08:47:26</publishTime>
     </File>
     <File Include="bin/UniSA.Services.dll">
-      <publishTime>09/17/2020 03:10:41</publishTime>
+      <publishTime>09/26/2020 23:42:40</publishTime>
     </File>
     <File Include="bin/UniSA.Services.dll.config">
       <publishTime>08/01/2020 05:21:42</publishTime>
     </File>
     <File Include="bin/UniSA.Services.pdb">
-      <publishTime>09/17/2020 03:10:41</publishTime>
+      <publishTime>09/26/2020 23:42:40</publishTime>
     </File>
     <File Include="bin/UniSAEmloyeeEmployerCertificationAndEngagement.dll">
-      <publishTime>09/17/2020 08:42:51</publishTime>
+      <publishTime>09/27/2020 00:57:59</publishTime>
     </File>
     <File Include="bin/UniSAEmloyeeEmployerCertificationAndEngagement.pdb">
-      <publishTime>09/17/2020 08:42:51</publishTime>
+      <publishTime>09/27/2020 00:57:59</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>01/23/2014 13:57:34</publishTime>
@@ -1073,13 +1073,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/27/2020 03:52:56</publishTime>
     </File>
     <File Include="Views/Candidate/ApplyForJob.cshtml">
-      <publishTime>08/21/2020 23:09:18</publishTime>
+      <publishTime>09/26/2020 10:25:05</publishTime>
     </File>
     <File Include="Views/Candidate/CandidateBadgesView.cshtml">
       <publishTime>08/20/2020 02:26:26</publishTime>
     </File>
     <File Include="Views/Candidate/CandidateJobList.cshtml">
-      <publishTime>08/21/2020 23:09:18</publishTime>
+      <publishTime>09/26/2020 11:49:56</publishTime>
     </File>
     <File Include="Views/Candidate/EnroleForMicroCredential.cshtml">
       <publishTime>08/20/2020 03:02:40</publishTime>
@@ -1106,7 +1106,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/25/2020 15:30:56</publishTime>
     </File>
     <File Include="Views/Employer/SelectEmployerJob.cshtml">
-      <publishTime>09/01/2020 21:32:20</publishTime>
+      <publishTime>09/26/2020 10:15:33</publishTime>
     </File>
     <File Include="Views/Employer/UpdateEmployerJob.cshtml">
       <publishTime>09/01/2020 21:33:13</publishTime>
@@ -1220,7 +1220,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/20/2020 15:53:38</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>09/17/2020 03:07:29</publishTime>
+      <publishTime>09/26/2020 12:49:36</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>07/24/2020 16:45:26</publishTime>
@@ -1235,7 +1235,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>07/24/2020 16:45:06</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>09/04/2020 09:39:46</publishTime>
+      <publishTime>09/26/2020 09:06:58</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="~/Content/bootstrap.css" />
     <link rel="stylesheet" href="~/assets/css/main.css" />
+    <link rel="stylesheet" href="~/assets/css/fontawesome-all.min" />
     <link rel="stylesheet" href="~/Content/jquery-ui.css" />
 </head>
 <body class="single is-preload">
@@ -20,20 +21,20 @@
     <style type="text/css">
         nav#mainMenu li a {
             font-weight: bolder !important;
-            font-size: 0.7em !important;
-            line-height: 3.5em !important;
+            font-size: 0.5em !important;
+            line-height: 3.0em !important;
             padding: 5px !important;
         }
 
         header > h1 {
             font-weight: bolder !important;
-            font-size: 1.1em !important;
-            line-height: 5em !important;
+            font-size: 0.7em !important;
+            line-height: 3.0em !important;
         }
 
         header#header {
-            height: 5.1em !important;
-            line-height: 5.5em !important;
+            height: 3.0em !important;
+            line-height: 3.0em !important;
         }
 
         .nav li a {
@@ -62,10 +63,12 @@
             color: orangered !important;
             font-weight: bolder !important;
         }
-        section#sidebar ul{
-            list-style:none !important;
-            padding-bottom:5px !important;
+
+        section#sidebar ul {
+            list-style: none !important;
+            padding-bottom: 5px !important;
         }
+
         section#sidebar {
             background-color: silver;
             color: black;
@@ -75,10 +78,10 @@
             width: 100% !important;
         }
 
-        section#sidebar #intro h3 {
-            font-size: 1.3em;
-            font-weight: 500;
-        }
+            section#sidebar #intro h3 {
+                font-size: 1.3em;
+                font-weight: 500;
+            }
     </style>
 
     <!-- Wrapper -->
@@ -714,226 +717,224 @@
                     jdivMicro.slideUp(500);
                 }
             });
-                @{
-                    if (Model != null)
-                    {
+            let isOneForm = false;
+            var form = $('div#FormDiv1 > form');
+            if (form) {
+                isOneForm = false;
+                form = $('body').find('div > form');
+            }else{
+                isOneForm = true;
+            }
 
-                        if (Model.GetType().Equals(typeof(Enumerable)))
-                        {
-                            if (Model.Any())
-                            {
-                                var props = Model.First().GetType().GetProperties();
+            $('body').find('input[type="checkbox"]').each(function (index, el) {
+                $(this).val("off");
+            });
 
-                                foreach (var n in props)
-                                {
-                                    if (n.PropertyType.Name.Equals("Boolean") && n.Name.Equals("IsEndorsed"))
-                                    {
-                                        IsEndorsedExists = "true";
-                                    }
-                                    if (n.PropertyType.Name.Equals("Boolean") && n.Name.Equals("IsAccredited"))
-                                    {
-                                        IsAccreditedExists = "true";
-                                    }
-                                    if (n.PropertyType.Name.Equals("Boolean") && n.Name.Equals("IsActive"))
-                                    {
-                                        IsActiveExists = "true";
-                                    }
-                                    if (n.PropertyType.Name.Equals("Boolean") && n.Name.Equals("QualificationsRequired"))
-                                    {
-                                        QualificationsRequiredExists = "true";
-                                    }
-                                }
-                            }
+            if (!isOneForm && form.length > 1) {
+
+               @{
+                   if (Model != null && typeof(IEnumerable<UniSAEmloyeeEmployerCertificationAndEngagement.Models.JobViewModel>).IsAssignableFrom(Model.GetType()))
+                   {
+                       var ind = 1;
+                       foreach(var mod in Model)
+                       {
+                           var props = mod.GetType().GetProperties();
+
+                           foreach (var n in props)
+                           {
+                               if (n.PropertyType.Name.Equals("Boolean") && n.Name.Equals("IsActive"))
+                               {
+                                   @Html.Raw("$(\'div#FormDiv"+ind+ " input[name=\"IsActive\"]\').attr('checked','true');");
+                                   break;
+                               }
+                           }
+                           ind++;
+                       }
+                   }
+                }
+            }
+            else {
+
+               @{if (Model != null)
+                   {
+                       var props = Model.GetType().GetProperties();
+
+                       foreach (var n in props)
+                       {
+                           if (n.PropertyType.Name.Equals("Boolean") && n.Name.Equals("IsEndorsed"))
+                           {
+                               IsEndorsedExists = "true";
+                           }
+                           if (n.PropertyType.Name.Equals("Boolean") && n.Name.Equals("IsAccredited"))
+                           {
+                               IsAccreditedExists = "true";
+                           }
+                           if (n.PropertyType.Name.Equals("Boolean") && n.Name.Equals("IsActive"))
+                           {
+                               IsActiveExists = "true";
+                           }
+                           if (n.PropertyType.Name.Equals("Boolean") && n.Name.Equals("QualificationsRequired"))
+                           {
+                               QualificationsRequiredExists = "true";
+                           }
+                       }
+                       if (IsEndorsedExists == "true" && Model.IsEndorsed)
+                       {
+                            @Html.Raw("$(\"input[name='IsEndorsed']\").attr('checked','true');");
+                       }
+                       else {
+
+                            @Html.Raw("$(\"input[name='IsEndorsed']\").removeAttr('checked');");
+                       }
+
+                       if (IsAccreditedExists == "true" && Model.IsAccredited)
+                       {
+                            @Html.Raw("$(\"input[name='IsAccredited']\").attr('checked','true');");
+                       }
+                       else {
+
+                            @Html.Raw("$(\"input[name='IsAccredited']\").removeAttr('checked');");
+                       }
+
+                       if (IsActiveExists == "true" && Model.IsActive)
+                       {
+                            @Html.Raw("$(\"input[name='IsActive']\").attr('checked','true');");
+                       }
+                       else {
+
+                            @Html.Raw("$(\"input[name='IsActive']\").removeAttr('checked');");
+                       }
+
+                       if (QualificationsRequiredExists == "true" && Model.QualificationsRequired)
+                       {
+                            @Html.Raw("$(\"input[name='QualificationsRequired']\").attr('checked','true');");
+                       }
+                       else {
+
+                            @Html.Raw("$(\"input[name='QualificationsRequired']\").removeAttr('checked');");
                         }
-                        else
-                        {
-                            var props = Model.GetType().GetProperties();
 
-                            foreach (var n in props)
-                            {
-                                if (n.PropertyType.Name.Equals("Boolean") && n.Name.Equals("IsEndorsed"))
-                                {
-                                    IsEndorsedExists = "true";
-                                }
-                                if (n.PropertyType.Name.Equals("Boolean") && n.Name.Equals("IsAccredited"))
-                                {
-                                    IsAccreditedExists = "true";
-                                }
-                                if (n.PropertyType.Name.Equals("Boolean") && n.Name.Equals("IsActive"))
-                                {
-                                    IsActiveExists = "true";
-                                }
-                                if (n.PropertyType.Name.Equals("Boolean") && n.Name.Equals("QualificationsRequired"))
-                                {
-                                    QualificationsRequiredExists = "true";
-                                }
-                            }
-                        }
                     }
                 }
-
-
-                $('body').find('input[type="checkbox"]').each(function (index, el) {
-                    $(this).val("off");
-                });
-
-                @if (IsEndorsedExists == "true" && Model.IsEndorsed)
-                {
-                    @Html.Raw("$(\"input[name='IsEndorsed']\").attr('checked','true');");
-                }
-                else {
-
-                    @Html.Raw("$(\"input[name='IsEndorsed']\").removeAttr('checked');");
-                }
-
-                @if (IsAccreditedExists == "true" && Model.IsAccredited)
-                {
-                    @Html.Raw("$(\"input[name='IsAccredited']\").attr('checked','true');");
-                }
-                else {
-
-                    @Html.Raw("$(\"input[name='IsAccredited']\").removeAttr('checked');");
-                }
-
-                @if (IsActiveExists == "true" && Model.IsActive)
-                {
-                    @Html.Raw("$(\"input[name='IsActive']\").attr('checked','true');");
-                }
-                else {
-
-                    @Html.Raw("$(\"input[name='IsActive']\").removeAttr('checked');");
-                }
-
-                @if (QualificationsRequiredExists == "true" && Model.QualificationsRequired)
-                {
-                    @Html.Raw("$(\"input[name='QualificationsRequired']\").attr('checked','true');");
-                }
-                else {
-
-                    @Html.Raw("$(\"input[name='QualificationsRequired']\").removeAttr('checked');");
-                }
-
+            }
                 $('input[type="checkbox"]').click(function () {
-                    var checked = $(this).val();
-                    if (checked === "on" || checked === "true") {
+                       var checked = $(this).val();
+                       if (checked === "on" || checked === "true") {
                         $(this).val("false");
-                    }
-                    else {
+                       }
+                       else {
                         $(this).val("true");
-                    }
-                });
+                       }
+                       });
+                       if (form != 'undefined') {
 
-                    var form = $('div#FormDiv > form');
+                           var action = form.attr('action');
 
-                    if (form != 'undefined') {
-
-                        var action = form.attr('action');
-
-                        form.find('input[type="submit"]').click(function () {
-                            form.find('input[type="checkbox"]').each(function (index, el) {
-                                var checked = $(this).val();
-                                if (checked === "on" || checked === "true") {
+                           form.find('input[type="submit"]').click(function () {
+                               form.find('input[type="checkbox"]').each(function (index, el) {
+                                   var checked = $(this).val();
+                                   if (checked === "on" || checked === "true") {
                                     $(this).val("true");
-                                }
-                                else {
+                                   }
+                                   else {
                                     $(this).val("false");
-                                }
-                                });
-                                var btn = $(this);
-                                switch (btn.attr("name")) {
-                                    case "Select":
-                                        (function ($) {
+                                   }
+                                   });
+                                   var btn = $(this);
+                                   switch (btn.attr("name")) {
+                                       case "Select":
+                                           (function ($) {
                                 $.fn.turnOffValidation = function (frm) {
-                                                var settings = frm.validate().settings;
+                                                   var settings = frm.validate().settings;
 
                                     for (var ruleIndex in settings.rules) {
-                                                    delete settings.rules[ruleIndex];
-                                                }
-                                            };
-                                        })(jQuery);
+                                                       delete settings.rules[ruleIndex];
+                                                   }
+                                               };
+                                           })(jQuery);
                             $(this).turnOffValidation(jQuery(form));
-                                        if (action.indexOf('CreateReadUpdate') > -1) {
-                                            action = action.replace('CreateReadUpdate', 'Select');
-                                        }
-                                        else if (action.indexOf('SelectDelete') > -1) {
-                                            action = action.replace('SelectDelete', 'Select');
-                                        }
-                                        else if (action.indexOf('Insert') > -1) {
-                                            action = action.replace('Insert', 'Select');
-                                        }
-                                        else if (action.indexOf('Delete') > -1) {
-                                            action = action.replace('Delete', 'Select');
-                                        }
-                                        else if (action.indexOf('Update') > -1) {
-                                            action = action.replace('Update', 'Select');
-                                        }
-                                        break;
-                                    case "Delete":
-                                        (function ($) {
+                                           if (action.indexOf('CreateReadUpdate') > -1) {
+                                               action = action.replace('CreateReadUpdate', 'Select');
+                                           }
+                                           else if (action.indexOf('SelectDelete') > -1) {
+                                               action = action.replace('SelectDelete', 'Select');
+                                           }
+                                           else if (action.indexOf('Insert') > -1) {
+                                               action = action.replace('Insert', 'Select');
+                                           }
+                                           else if (action.indexOf('Delete') > -1) {
+                                               action = action.replace('Delete', 'Select');
+                                           }
+                                           else if (action.indexOf('Update') > -1) {
+                                               action = action.replace('Update', 'Select');
+                                           }
+                                           break;
+                                       case "Delete":
+                                           (function ($) {
                                 $.fn.turnOffValidation = function (frm) {
-                                                var settings = frm.validate().settings;
+                                                   var settings = frm.validate().settings;
 
                                     for (var ruleIndex in settings.rules) {
-                                                    delete settings.rules[ruleIndex];
-                                                }
-                                            };
-                                        })(jQuery);
+                                                       delete settings.rules[ruleIndex];
+                                                   }
+                                               };
+                                           })(jQuery);
                             $(this).turnOffValidation(jQuery(form));
-                                        if (action.indexOf('CreateReadUpdate') > -1) {
-                                            action = action.replace('CreateReadUpdate', 'Delete');
-                                        }
-                                        else if (action.indexOf('SelectDelete') > -1) {
-                                            action = action.replace('SelectDelete', 'Delete');
-                                        }
-                                        else if (action.indexOf('Select') > -1) {
-                                            action = action.replace('Select', 'Delete');
-                                        }
-                                        else if (action.indexOf('Update') > -1) {
-                                            action = action.replace('Update', 'Delete');
-                                        }
-                                        else if (action.indexOf('Insert') > -1) {
-                                            action = action.replace('Insert', 'Delete');
-                                        }
-                                        break;
-                                    case "Update":
-                                        if (action.indexOf('CreateReadUpdate') > -1) {
-                                            action = action.replace('CreateReadUpdate', 'Update');
-                                        }
-                                        else if (action.indexOf('SelectDelete') > -1) {
-                                            action = action.replace('SelectDelete', 'Update');
-                                        }
-                                        else if (action.indexOf('Select') > -1) {
-                                            action = action.replace('Select', 'Update');
-                                        }
-                                        else if (action.indexOf('Delete') > -1) {
-                                            action = action.replace('Delete', 'Update');
-                                        }
-                                        else if (action.indexOf('Insert') > -1) {
-                                            action = action.replace('Insert', 'Update');
-                                        }
-                                        break;
-                                    case "Insert":
-                                        if (action.indexOf('CreateReadUpdate') > -1) {
-                                            action = action.replace('CreateReadUpdate', 'Insert');
-                                        }
-                                        else if (action.indexOf('SelectDelete') > -1) {
-                                            action = action.replace('SelectDelete', 'Insert');
-                                        }
-                                        else if (action.indexOf('Select') > -1) {
-                                            action = action.replace('Select', 'Insert');
-                                        }
-                                        else if (action.indexOf('Delete') > -1) {
-                                            action = action.replace('Delete', 'Insert');
-                                        }
-                                        else if (action.indexOf('Update') > -1) {
-                                            action = action.replace('Update', 'Insert');
-                                        }
-                                        break;
-                                }
-                                form.attr('action', action);
-                                form.submit();
-                            });
-                        }
+                                           if (action.indexOf('CreateReadUpdate') > -1) {
+                                               action = action.replace('CreateReadUpdate', 'Delete');
+                                           }
+                                           else if (action.indexOf('SelectDelete') > -1) {
+                                               action = action.replace('SelectDelete', 'Delete');
+                                           }
+                                           else if (action.indexOf('Select') > -1) {
+                                               action = action.replace('Select', 'Delete');
+                                           }
+                                           else if (action.indexOf('Update') > -1) {
+                                               action = action.replace('Update', 'Delete');
+                                           }
+                                           else if (action.indexOf('Insert') > -1) {
+                                               action = action.replace('Insert', 'Delete');
+                                           }
+                                           break;
+                                       case "Update":
+                                           if (action.indexOf('CreateReadUpdate') > -1) {
+                                               action = action.replace('CreateReadUpdate', 'Update');
+                                           }
+                                           else if (action.indexOf('SelectDelete') > -1) {
+                                               action = action.replace('SelectDelete', 'Update');
+                                           }
+                                           else if (action.indexOf('Select') > -1) {
+                                               action = action.replace('Select', 'Update');
+                                           }
+                                           else if (action.indexOf('Delete') > -1) {
+                                               action = action.replace('Delete', 'Update');
+                                           }
+                                           else if (action.indexOf('Insert') > -1) {
+                                               action = action.replace('Insert', 'Update');
+                                           }
+                                           break;
+                                       case "Insert":
+                                           if (action.indexOf('CreateReadUpdate') > -1) {
+                                               action = action.replace('CreateReadUpdate', 'Insert');
+                                           }
+                                           else if (action.indexOf('SelectDelete') > -1) {
+                                               action = action.replace('SelectDelete', 'Insert');
+                                           }
+                                           else if (action.indexOf('Select') > -1) {
+                                               action = action.replace('Select', 'Insert');
+                                           }
+                                           else if (action.indexOf('Delete') > -1) {
+                                               action = action.replace('Delete', 'Insert');
+                                           }
+                                           else if (action.indexOf('Update') > -1) {
+                                               action = action.replace('Update', 'Insert');
+                                           }
+                                           break;
+                                   }
+                                   form.attr('action', action);
+                                   form.submit();
+                               });
+                           }
                     });
     </script>
 

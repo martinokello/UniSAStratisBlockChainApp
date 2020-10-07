@@ -47,14 +47,23 @@
                     @Html.DisplayFor(modelItem => item.NumberOfPositions)
                 </td>
                 <td>
-                    @((ViewBag.EmployerIdList as List<SelectListItem>).First(e => e.Value == item.EmployerId.ToString()).Text)
-                </td>
+                            @((ViewBag.EmployerIdList as List<SelectListItem>).First(e => e.Value == item.EmployerId.ToString()).Text)
+                        </td>
+        
+                        <td>
+                            <div id='@formDivId'>
+                                <form>
 
-                <td>
-                    @item.IsActive.ToString()
+                                    <div class="form-check row">
+                                        <span class="col-md-offset-2"></span>
+                                        <input type="checkbox" class="col-md-2 form-check" name="IsActive" id="IsActive" style="text-align:right !important;" readonly />
+                                        <label class="col-md-10 form-label" for="IsActive" style="font-weight:bolder !important;">IsActive</label>
+                                    </div>
+                                </form>
+                            </div>
                 </td>
                 <td>
-                    @item.DateUpdated.ToString("dd-MM-yyyy")
+                    @Html.DisplayFor(modelItem => item.DateUpdated)
                 </td>
                 <td>
                     @Html.ActionLink("Apply For Job", "ApplyForJob", new { id = item.JobId })

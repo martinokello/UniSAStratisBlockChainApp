@@ -48,7 +48,6 @@ C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\bin\Debug\E
 C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\bin\Debug\EntityFramework.SqlServer.dll
 C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\bin\Debug\EntityFramework.xml
 C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\bin\Debug\EntityFramework.SqlServer.xml
-C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\obj\Debug\RSA316Engine.csprojAssemblyReference.cache
 C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\obj\Debug\RSA316Engine.csproj.CoreCompileInputs.cache
 C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\obj\Debug\RSA316Engine.csproj.CopyComplete
 C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\obj\Debug\RSA316Engine.dll

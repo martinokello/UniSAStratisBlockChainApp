@@ -233,6 +233,7 @@
     <Compile Include="Models\CandidateJobApplicationViewModel.cs" />
     <Compile Include="Models\CandidateMicroCredentialCourseViewModel.cs" />
     <Compile Include="Models\CandidateViewModel.cs" />
+    <Compile Include="Models\CertificateCreationViewModel.cs" />
     <Compile Include="Models\EmployerJobsViewModel.cs" />
     <Compile Include="Models\EmployerViewModel.cs" />
     <Compile Include="Models\EndorsementBodyViewModel.cs" />
@@ -294,6 +295,16 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="images\BlockChain.jpg" />
+    <Content Include="images\Certificates\Certificate1.jpg" />
+    <Content Include="images\Certificates\Certificate2.jpg" />
+    <Content Include="images\Certificates\Certificate3.jpg" />
+    <Content Include="images\Certificates\Certificate4.jpg" />
+    <Content Include="images\Certificates\Certificate5.jpg" />
+    <Content Include="images\Certificates\joanne.butt%40gmail.com_JAVASCRIPT CERTIFICATION MVP.jpg" />
+    <Content Include="images\Certificates\leon.butt%40gmail.com_ASP.NET MVP - 1.jpg" />
+    <Content Include="images\Certificates\leon.butt%40gmail.com_JAVASCRIPT CERTIFICATION MVP.jpg" />
+    <Content Include="images\Certificates\leon.butt%40gmail.com_Oracle MVP Certified.jpg" />
+    <Content Include="images\Certificates\leon.butt%40gmail.com_TYPESCRIPT GURU.jpg" />
     <Content Include="images\StratisWallet.jpg" />
     <Content Include="images\StratisLogo.jpg" />
     <Content Include="images\avatar.jpg" />
@@ -475,6 +486,7 @@
     <Content Include="Views\RecruitmentAgent\SelectDeleteUserRecruitmentAgent .cshtml" />
     <Content Include="Views\Government\CreateReadUpdateUserGovernment.cshtml" />
     <Content Include="Views\Government\SelectDeleteUserGovernment.cshtml" />
+    <Content Include="Views\Administration\GenerateUserCandidateCertificate.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -496,6 +508,10 @@
     <ProjectReference Include="..\RSA316Enginge\RSA316Engine.csproj">
       <Project>{77CC200F-6104-4683-A301-D3BE2A853895}</Project>
       <Name>RSA316Engine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UniSA.CertificateGenerator\UniSA.CertificateGenerator.csproj">
+      <Project>{fbbe7987-7c83-4ad0-a327-8945d02e8bd6}</Project>
+      <Name>UniSA.CertificateGenerator</Name>
     </ProjectReference>
     <ProjectReference Include="..\UniSA.DataAccess\UniSA.DataAccess.csproj">
       <Project>{2633627f-cd81-4ef0-9c1b-b7576ab61dbe}</Project>

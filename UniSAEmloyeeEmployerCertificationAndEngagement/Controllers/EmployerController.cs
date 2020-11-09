@@ -78,7 +78,7 @@ namespace UniSAEmloyeeEmployerCertificationAndEngagement.Controllers
         }
         private List<SelectListItem> GetJobIdsForEmployer(int employerId)
         {
-            return _unitOfWork.JobRepository.GetAll().Where(j=> j.EmployerId == employerId).Select(a => new SelectListItem { Text = a.JobTitle, Value = a.JobId.ToString() }).ToList();
+            return _unitOfWork.JobRepository.GetAll().Where(j => j.EmployerId == employerId).Select(a => new SelectListItem { Text = a.JobTitle, Value = a.JobId.ToString() }).ToList();
         }
         private List<SelectListItem> GetMicroCredentialIds()
         {
@@ -174,7 +174,7 @@ namespace UniSAEmloyeeEmployerCertificationAndEngagement.Controllers
             var employer = _repositoryEndPointService.GetEmployerByEmail(User.Identity.Name);
             if (employer == null) return View("Failed");
             var emptySelectJobIds = new List<SelectListItem> { new SelectListItem { Text = "", Value = "" } };
-            ViewBag.JobsIdList = GetJobIdsForEmployer(employer.EmployerId)?? emptySelectJobIds;
+            ViewBag.JobsIdList = GetJobIdsForEmployer(employer.EmployerId) ?? emptySelectJobIds;
             return View(initJobModel);
         }
 
@@ -212,8 +212,16 @@ namespace UniSAEmloyeeEmployerCertificationAndEngagement.Controllers
             return View("Success");
         }
         [HttpGet]
+        public string GetMicroCredentialCertificateUrlById(int candidateId, int microCredentialId)
+        {
+            UserMicroCredentialBadges microCredentialBadges = _repositoryEndPointService.GetUserMicroCredentialBadgesById(candidateId, microCredentialId);
+            return "/images/Certificates/" + microCredentialBadges.Username + "_" + microCredentialBadges.MicroCredentialBadges + ".jpg";
+        }
+        [HttpGet]
         public ActionResult ValidateCandidateMicroCredential()
         {
+            ViewBag.MicroCredentialName = string.Empty;
+            ViewBag.CertificateImageUrl = new string[] { string.Empty };
             ViewBag.MicroCredentialBadgesIdList = GetMicroCredentialBadgeIds();
             ViewBag.MicroCredentialIdList = GetMicroCredentialIds();
             ViewBag.CandidateIdList = GetCandidateIds();
@@ -225,6 +233,7 @@ namespace UniSAEmloyeeEmployerCertificationAndEngagement.Controllers
             ViewBag.MicroCredentialBadgesIdList = GetMicroCredentialBadgeIds();
             ViewBag.MicroCredentialIdList = GetMicroCredentialIds();
             ViewBag.CandidateIdList = GetCandidateIds();
+
             if (ModelState.IsValid)
             {
                 var userMicroCredential = AutoMapperConfig.Configure().Map(userMicroCredentialViewModel, typeof(ValidateUserMicroCredentialBadges), typeof(UserMicroCredentialBadges)) as UserMicroCredentialBadges;
@@ -261,7 +270,7 @@ namespace UniSAEmloyeeEmployerCertificationAndEngagement.Controllers
             {
                 var em = empJobs.Employer;
                 var jLs = new List<JobViewModel>();
-                foreach(var job in empJobs.Jobs.ToList().FirstOrDefault())
+                foreach (var job in empJobs.Jobs.ToList().FirstOrDefault())
                 {
                     var jobViewModel = new JobViewModel { JobTitle = job.JobTitle, JobId = job.JobId, JobCode = job.JobCode, JobDescription = job.JobDescription };
                     if (!jLs.Contains(jobViewModel))

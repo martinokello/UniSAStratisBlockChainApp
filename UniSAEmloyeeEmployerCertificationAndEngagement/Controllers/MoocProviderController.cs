@@ -342,6 +342,8 @@ namespace UniSAEmloyeeEmployerCertificationAndEngagement.Controllers
                                     select bg).ToArray();
             var microCredentialBadgesViewModel = AutoMapperConfig.Configure().Map(userMicCredBadges, typeof(UserMicroCredentialBadges[]), typeof(UserMicroCredentialBadgesViewModel[])) as UserMicroCredentialBadgesViewModel[];
 
+            ViewBag.CertificateImageUrl = userMicCredBadges.Select(p => "/images/Certificates/" + p.Username + "_" + p.MicroCredentialBadges + ".jpg").ToArray();
+
             return View(microCredentialBadgesViewModel);
         }
 

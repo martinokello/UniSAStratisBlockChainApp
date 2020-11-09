@@ -697,6 +697,7 @@ C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Tests\bin\Debug\Owi
 C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Tests\bin\Debug\System.Web.Http.dll
 C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Tests\bin\Debug\log4net.dll
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Tests\bin\Debug\UniSA.CertificateGenerator3.dll
 C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Tests\bin\Debug\AutoMapper.dll
 C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Tests\bin\Debug\Autofac.Integration.Mvc.dll
 C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Tests\bin\Debug\Autofac.Integration.WebApi.dll
@@ -741,6 +742,7 @@ C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Tests\bin\Debug\Mic
 C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Tests\bin\Debug\System.Web.Http.xml
 C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Tests\bin\Debug\log4net.xml
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Tests\bin\Debug\UniSA.CertificateGenerator3.pdb
 C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Tests\bin\Debug\AutoMapper.xml
 C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Tests\bin\Debug\Autofac.Integration.Mvc.xml
 C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Tests\bin\Debug\Autofac.Integration.WebApi.pdb

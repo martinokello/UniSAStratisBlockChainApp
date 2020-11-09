@@ -19,6 +19,7 @@
                 <th>
                     @Html.DisplayNameFor(model => model.MicroCredentialBadges)
                 </th>
+                <th>Certificate Badge Thumbnail</th>
                 <th></th>
             </tr>
 
@@ -35,11 +36,13 @@
                         @Html.DisplayFor(modelItem => item.MicroCredentialBadges)
                     </td>
                     <td>
-                        @*
-                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-                        *@
+                        @{                             
+                            var certUrl = (ViewBag.CertificateImageUrl as string[]).FirstOrDefault(q => q.Contains(item.MicroCredentialBadges));
+
+                            <h6>Click Certificate Thumbnail, To Download Certificate</h6>
+                            <a href="@certUrl"><img src="@certUrl" alt="Certificate for @item.MicroCredentialBadges" style="width:20%; height:auto;" /></a>
+
+                        }
                     </td>
                 </tr>
             }

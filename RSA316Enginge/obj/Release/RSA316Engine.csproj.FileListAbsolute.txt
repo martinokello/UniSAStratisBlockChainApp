@@ -15,3 +15,15 @@ D:\PhonePics\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\o
 D:\PhonePics\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\obj\Release\RSA316Engine.csproj.CopyComplete
 D:\PhonePics\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\obj\Release\RSA316Engine.dll
 D:\PhonePics\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\obj\Release\RSA316Engine.pdb
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\bin\Release\RSA316Engine.dll.config
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\bin\Release\RSA316Engine.dll
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\bin\Release\RSA316Engine.pdb
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\bin\Release\EntityFramework.dll
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\bin\Release\EntityFramework.SqlServer.dll
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\bin\Release\EntityFramework.xml
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\bin\Release\EntityFramework.SqlServer.xml
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\obj\Release\RSA316Engine.csprojAssemblyReference.cache
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\obj\Release\RSA316Engine.csproj.CoreCompileInputs.cache
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\obj\Release\RSA316Engine.csproj.CopyComplete
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\obj\Release\RSA316Engine.dll
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\RSA316Enginge\obj\Release\RSA316Engine.pdb

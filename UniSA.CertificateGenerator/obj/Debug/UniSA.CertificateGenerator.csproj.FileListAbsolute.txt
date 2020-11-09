@@ -1,0 +1,6 @@
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.CertificateGenerator\bin\Debug\UniSA.CertificateGenerator3.dll
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.CertificateGenerator\bin\Debug\UniSA.CertificateGenerator3.pdb
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.CertificateGenerator\obj\Debug\UniSA.CertificateGenerator.csprojAssemblyReference.cache
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.CertificateGenerator\obj\Debug\UniSA.CertificateGenerator.csproj.CoreCompileInputs.cache
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.CertificateGenerator\obj\Debug\UniSA.CertificateGenerator3.dll
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.CertificateGenerator\obj\Debug\UniSA.CertificateGenerator3.pdb

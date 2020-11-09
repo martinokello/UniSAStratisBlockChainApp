@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniSA.Tests", "..\UniSA.Tes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniSAEmloyeeEmployerCertificationAndEngagement", "UniSAEmloyeeEmployerCertificationAndEngagement.csproj", "{ED74D3C0-105F-4304-BDF3-DFE3274452C5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniSA.CertificateGenerator", "..\UniSA.CertificateGenerator\UniSA.CertificateGenerator.csproj", "{FBBE7987-7C83-4AD0-A327-8945D02E8BD6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{ED74D3C0-105F-4304-BDF3-DFE3274452C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED74D3C0-105F-4304-BDF3-DFE3274452C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED74D3C0-105F-4304-BDF3-DFE3274452C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBBE7987-7C83-4AD0-A327-8945D02E8BD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBBE7987-7C83-4AD0-A327-8945D02E8BD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBBE7987-7C83-4AD0-A327-8945D02E8BD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBBE7987-7C83-4AD0-A327-8945D02E8BD6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

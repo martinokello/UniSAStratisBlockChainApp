@@ -5,11 +5,14 @@ using RSA316Infinito.BigRsaCrypto;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using UniSA.CertificateGenerator;
 using UniSA.Domain;
 using UniSA.Services.RepositoryServices;
 using UniSA.Services.StratisBlockChainServices;
@@ -48,54 +51,118 @@ namespace UniSAEmloyeeEmployerCertificationAndEngagement.Controllers
         }
         private List<SelectListItem> GetAddressIds()
         {
-            return _unitOfWork.AddressRepository.GetAll().Select(a => new SelectListItem { Text = a.AddressLine1, Value = a.AddressId.ToString() }).ToList();
+            List<SelectListItem> initItem = new List<SelectListItem> { new SelectListItem { Text = "Select Item", Value = (-1).ToString() } };
+            initItem.AddRange(_unitOfWork.AddressRepository.GetAll().Select(a => new SelectListItem { Text = a.AddressLine1, Value = a.AddressId.ToString() }).ToList());
+            return initItem;
         }
         private List<SelectListItem> GetAccreditationBodyIds()
         {
-            return _unitOfWork.AccreditationBodyRepository.GetAll().Select(a => new SelectListItem { Text = a.AccreditationBodyName, Value = a.AccreditationBodyId.ToString() }).ToList();
+            List<SelectListItem> initItem = new List<SelectListItem> { new SelectListItem { Text = "Select Item", Value = (-1).ToString() } };
+            initItem.AddRange(_unitOfWork.AccreditationBodyRepository.GetAll().Select(a => new SelectListItem { Text = a.AccreditationBodyName, Value = a.AccreditationBodyId.ToString() }).ToList());
+            return initItem;
         }
 
         private List<SelectListItem> GetEndorsedBodyIds()
         {
-            return _unitOfWork.EndorsementBodyRepository.GetAll().Select(a => new SelectListItem { Text = a.EndorsementBodyName, Value = a.EndorsementBodyId.ToString() }).ToList();
+            List<SelectListItem> initItem = new List<SelectListItem> { new SelectListItem { Text = "Select Item", Value = (-1).ToString() } };
+            initItem.AddRange(_unitOfWork.EndorsementBodyRepository.GetAll().Select(a => new SelectListItem { Text = a.EndorsementBodyName, Value = a.EndorsementBodyId.ToString() }).ToList());
+            return initItem;
         }
         private List<SelectListItem> GetCandidateIds()
         {
-            return _unitOfWork.CandidateRepository.GetAll().Select(a => new SelectListItem { Text = a.UserName, Value = a.CandidateId.ToString() }).ToList();
+            List<SelectListItem> initItem = new List<SelectListItem> { new SelectListItem { Text = "Select Item", Value = (-1).ToString() } };
+            initItem.AddRange(_unitOfWork.CandidateRepository.GetAll().Select(a => new SelectListItem { Text = a.UserName, Value = a.CandidateId.ToString() }).ToList());
+            return initItem;
         }
         private List<SelectListItem> GetEmployerIds()
         {
-            return _unitOfWork.EmployerRepository.GetAll().Select(a => new SelectListItem { Text = a.EmployerName, Value = a.EmployerId.ToString() }).ToList();
+            List<SelectListItem> initItem = new List<SelectListItem> { new SelectListItem { Text = "Select Item", Value = (-1).ToString() } };
+            initItem.AddRange(_unitOfWork.EmployerRepository.GetAll().Select(a => new SelectListItem { Text = a.EmployerName, Value = a.EmployerId.ToString() }).ToList());
+            return initItem;
         }
         private List<SelectListItem> GetJobIds()
         {
-            return _unitOfWork.JobRepository.GetAll().Select(a => new SelectListItem { Text = a.JobTitle, Value = a.JobId.ToString() }).ToList();
+            List<SelectListItem> initItem = new List<SelectListItem> { new SelectListItem { Text = "Select Item", Value = (-1).ToString() } };
+            initItem.AddRange(_unitOfWork.JobRepository.GetAll().Select(a => new SelectListItem { Text = a.JobTitle, Value = a.JobId.ToString() }).ToList());
+            return initItem;
         }
         private List<SelectListItem> GetMicroCredentialIds()
         {
-            return _unitOfWork.MicroCredentialRepository.GetAll().Select(a => new SelectListItem { Text = a.MicroCredentialName, Value = a.MicroCredentialId.ToString() }).ToList();
+            List<SelectListItem> initItem = new List<SelectListItem> { new SelectListItem { Text = "Select Item", Value = (-1).ToString() } };
+            initItem.AddRange(_unitOfWork.MicroCredentialRepository.GetAll().Select(a => new SelectListItem { Text = a.MicroCredentialName, Value = a.MicroCredentialId.ToString() }).ToList());
+            return initItem;
         }
         private List<SelectListItem> GetGovernmentIds()
         {
-            return _unitOfWork.GorvernmentRepository.GetAll().Select(a => new SelectListItem { Text = a.GovernmentDepartmentName, Value = a.DepartmentAddressId.ToString() }).ToList();
+            List<SelectListItem> initItem = new List<SelectListItem> { new SelectListItem { Text = "Select Item", Value = (-1).ToString() } };
+            initItem.AddRange(_unitOfWork.GorvernmentRepository.GetAll().Select(a => new SelectListItem { Text = a.GovernmentDepartmentName, Value = a.DepartmentAddressId.ToString() }).ToList());
+            return initItem;
         }
         private List<SelectListItem> GetCandidateMicroCredentialCourseIds()
         {
-            return _unitOfWork.CandidateMicroCredentialCourseRepository.GetAll().Select(a => new SelectListItem { Text = "[" + a.MicroCredential.MicroCredentialName + "@" + a.Candidate.EmailAddress + "]", Value = a.CandidateMicroCredentialCourseId.ToString() }).ToList();
+            List<SelectListItem> initItem = new List<SelectListItem> { new SelectListItem { Text = "Select Item", Value = (-1).ToString() } };
+            initItem.AddRange(_unitOfWork.CandidateMicroCredentialCourseRepository.GetAll().Select(a => new SelectListItem { Text = "[" + a.MicroCredential.MicroCredentialName + "@" + a.Candidate.EmailAddress + "]", Value = a.CandidateMicroCredentialCourseId.ToString() }).ToList());
+            return initItem;
         }
         private List<SelectListItem> GetCandidateMicroCredentialBadgesIds()
         {
-            return _unitOfWork.CandidatetMicroCredentialBadgesRepository.GetAll().Select(a => new SelectListItem { Text = a.MicroCredentialBadges, Value = a.MicroCredentialBadgeId.ToString() }).ToList();
+            List<SelectListItem> initItem = new List<SelectListItem> { new SelectListItem { Text = "Select Item", Value = (-1).ToString() } };
+            initItem.AddRange(_unitOfWork.CandidatetMicroCredentialBadgesRepository.GetAll().Select(a => new SelectListItem { Text = a.MicroCredentialBadges, Value = a.MicroCredentialBadgeId.ToString() }).ToList());
+            return initItem;
         }
         private List<SelectListItem> GetMoocProviderIds()
         {
-            return _unitOfWork.MoocProviderRepository.GetAll().Select(a => new SelectListItem { Text = a.MoocProviderName, Value = a.MoocProviderId.ToString() }).ToList();
+            List<SelectListItem> initItem = new List<SelectListItem> { new SelectListItem { Text = "Select Item", Value = (-1).ToString() } };
+            initItem.AddRange(_unitOfWork.MoocProviderRepository.GetAll().Select(a => new SelectListItem { Text = a.MoocProviderName, Value = a.MoocProviderId.ToString() }).ToList());
+            return initItem;
         }
         private List<SelectListItem> GetRecrutimentAgentIds()
         {
-            return _unitOfWork.RecruitmentAgencyRepository.GetAll().Select(a => new SelectListItem { Text = a.RecruitmentAgencyName, Value = a.RecruitmentAgencyId.ToString() }).ToList();
+            List<SelectListItem> initItem = new List<SelectListItem> { new SelectListItem { Text = "Select Item", Value = (-1).ToString() } };
+            initItem.AddRange(_unitOfWork.RecruitmentAgencyRepository.GetAll().Select(a => new SelectListItem { Text = a.RecruitmentAgencyName, Value = a.RecruitmentAgencyId.ToString() }).ToList());
+            return initItem;
         }
+        [HttpGet]
+        public ActionResult GenerateUserCandidateCertificate()
+        {
+            ViewBag.CandidateIdList = GetCandidateIds();
+            ViewBag.MicroCredentialIdList = GetMicroCredentialIds();
+            ViewBag.MicroCredentialBadgeIdList = GetCandidateMicroCredentialBadgesIds();
+            return View();
+        }
+        [HttpPost]
+        public ActionResult GenerateUserCandidateCertificate(CertificateCreationViewModel model, HttpPostedFileBase jpgCertificateImage)
+        {
+            ViewBag.CandidateIdList = GetCandidateIds();
+            ViewBag.MicroCredentialIdList = GetMicroCredentialIds();
+            ViewBag.MicroCredentialBadgeIdList = GetCandidateMicroCredentialBadgesIds();
 
+            if (ModelState.IsValid)
+            {
+                var certGenerator = new CertificateGeneratorEngine();
+                //Should be Called with string[] Content and merged with image result.
+
+                var candidate = _repositoryEndPointService.GetCandidateById(model.CandidateId);
+                var microCredential = _repositoryEndPointService.GetMicroCredentialById(model.MicroCredentialId);
+                var badge = _repositoryEndPointService.GetUserMicroCredentialBadgesByBadgeId(model.MicroCredentialBadgeId);
+                var userCredentialPath = Server.MapPath($"~/images/Certificates/{candidate.EmailAddress + "_" + badge.MicroCredentialBadges}.jpg");
+
+                byte[] certBytes = new byte[jpgCertificateImage.ContentLength];
+
+                MemoryStream inputStream = new MemoryStream(jpgCertificateImage.InputStream.Read(certBytes, 0, jpgCertificateImage.ContentLength));
+                jpgCertificateImage.InputStream.Flush();
+                inputStream.Flush();
+                inputStream.Close();
+                jpgCertificateImage.InputStream.Close();
+                jpgCertificateImage.InputStream.Dispose();
+                inputStream.Dispose();
+                certGenerator.ImageTextMerge(certBytes, userCredentialPath, model.CertificateTextContent.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries),
+                  30, 80, 800, 425, 800, 425);
+
+                return View("Success");
+            }
+            return View(model);
+        }
         public ActionResult Index()
         {
             return View();
@@ -1370,7 +1437,7 @@ namespace UniSAEmloyeeEmployerCertificationAndEngagement.Controllers
         {
             if (_unitOfWork.StratisAccountRepository.GetAll().Any())
             {
-                return _unitOfWork.StratisAccountRepository.GetAll().Select(r => new SelectListItem { Text = r.EmailAddress+", "+r.AccountName, Value = r.StratisAccountId.ToString() }).ToList();
+                return _unitOfWork.StratisAccountRepository.GetAll().Select(r => new SelectListItem { Text = r.EmailAddress + ", " + r.AccountName, Value = r.StratisAccountId.ToString() }).ToList();
             }
             var list = new List<SelectListItem>();
             list.Add(new SelectListItem { Text = "No Stratis Accounts Yet", Value = (-1).ToString() });
@@ -1400,71 +1467,71 @@ namespace UniSAEmloyeeEmployerCertificationAndEngagement.Controllers
             }
             return View(stratisAccountModel);
         }
-/*
-        [HttpGet]
-        public ActionResult UpdateStratisAccount()
-        {
-            ViewBag.StratisAccountIdList = GetStratisAccountIdList();
-            var stratisAccountModel = new StratisAccountViewModel();
-            return View(stratisAccountModel);
-        }
-
-        [HttpPost]
-        public async Task<ActionResult> UpdateStratisAccount(StratisAccountViewModel stratisAccountModel)
-        {
-            ViewBag.StratisAccountIdList = GetStratisAccountIdList();
-
-            if (ModelState.IsValid)
-            {
-                var stratisAcc = _unitOfWork.StratisAccountRepository.GetById(stratisAccountModel.StratisAccountId);
-                if (stratisAcc == null)
+        /*
+                [HttpGet]
+                public ActionResult UpdateStratisAccount()
                 {
-                    var moocMicroCredentialProvider = new MoocMicroCredentialProvider(new StratisEndPointAdhocService(), new EncryptDecrypt());
-                    HttpClient client = new HttpClient();
-                    //client.BaseAddress = new Uri(ConfigurationManager.AppSettings["StratisBlockChainBaseUrl"]);
-                    var stratisApiComponent = moocMicroCredentialProvider.StratisApiFullfilRequestComponent = new UniSA.Services.StratisBlockChainServices.StratisApi.StratisApiFullfilRequestComponent(client);
+                    ViewBag.StratisAccountIdList = GetStratisAccountIdList();
+                    var stratisAccountModel = new StratisAccountViewModel();
+                    return View(stratisAccountModel);
+                }
 
-                    var walletCreated = await stratisApiComponent.CreateWallet(stratisAccountModel.AccountWalletName, ConfigurationManager.AppSettings["StratisAccountFormationLatePassword"], stratisAccountModel.AccountName);
-                    if (walletCreated)
+                [HttpPost]
+                public async Task<ActionResult> UpdateStratisAccount(StratisAccountViewModel stratisAccountModel)
+                {
+                    ViewBag.StratisAccountIdList = GetStratisAccountIdList();
+
+                    if (ModelState.IsValid)
                     {
-                        var accountAddresses = await stratisApiComponent.GetAccountAddresses(stratisAccountModel.AccountWalletName, stratisAccountModel.AccountName);
-
-                        try
+                        var stratisAcc = _unitOfWork.StratisAccountRepository.GetById(stratisAccountModel.StratisAccountId);
+                        if (stratisAcc == null)
                         {
-                            if (stratisAccountModel.StratisAccountId < 1)
+                            var moocMicroCredentialProvider = new MoocMicroCredentialProvider(new StratisEndPointAdhocService(), new EncryptDecrypt());
+                            HttpClient client = new HttpClient();
+                            //client.BaseAddress = new Uri(ConfigurationManager.AppSettings["StratisBlockChainBaseUrl"]);
+                            var stratisApiComponent = moocMicroCredentialProvider.StratisApiFullfilRequestComponent = new UniSA.Services.StratisBlockChainServices.StratisApi.StratisApiFullfilRequestComponent(client);
+
+                            var walletCreated = await stratisApiComponent.CreateWallet(stratisAccountModel.AccountWalletName, ConfigurationManager.AppSettings["StratisAccountFormationLatePassword"], stratisAccountModel.AccountName);
+                            if (walletCreated)
                             {
-                                _unitOfWork.StratisAccountRepository.Add(new UniSA.Domain.StratisAccount
+                                var accountAddresses = await stratisApiComponent.GetAccountAddresses(stratisAccountModel.AccountWalletName, stratisAccountModel.AccountName);
+
+                                try
                                 {
-                                    AccountName = stratisAccountModel.AccountName,
-                                    EmailAddress = stratisAccountModel.EmailAddress,
-                                    AccountWalletName = stratisAccountModel.AccountWalletName,
-                                    AccountStratisAddress1 = accountAddresses.addresses[0].address,
-                                    AccountStratisAddress2 = accountAddresses.addresses[1].address,
-                                    AccountStratisAddress3 = accountAddresses.addresses[2].address
-                                });
-                                _unitOfWork.SaveChanges();
-                                return View("Success");
-                            }
-                            else
-                            {
-                                var stratisAccount = AutoMapperConfig.Configure().Map(stratisAccountModel, typeof(StratisAccountViewModel), typeof(StratisAccount)) as StratisAccount;
-                                if (_unitOfWork.StratisAccountRepository.Update(stratisAccount))
+                                    if (stratisAccountModel.StratisAccountId < 1)
+                                    {
+                                        _unitOfWork.StratisAccountRepository.Add(new UniSA.Domain.StratisAccount
+                                        {
+                                            AccountName = stratisAccountModel.AccountName,
+                                            EmailAddress = stratisAccountModel.EmailAddress,
+                                            AccountWalletName = stratisAccountModel.AccountWalletName,
+                                            AccountStratisAddress1 = accountAddresses.addresses[0].address,
+                                            AccountStratisAddress2 = accountAddresses.addresses[1].address,
+                                            AccountStratisAddress3 = accountAddresses.addresses[2].address
+                                        });
+                                        _unitOfWork.SaveChanges();
+                                        return View("Success");
+                                    }
+                                    else
+                                    {
+                                        var stratisAccount = AutoMapperConfig.Configure().Map(stratisAccountModel, typeof(StratisAccountViewModel), typeof(StratisAccount)) as StratisAccount;
+                                        if (_unitOfWork.StratisAccountRepository.Update(stratisAccount))
+                                        {
+                                            return View("Success");
+                                        }
+                                    }
+                                }
+                                catch
                                 {
-                                    return View("Success");
+                                    throw;
                                 }
                             }
                         }
-                        catch
-                        {
-                            throw;
-                        }
-                    }
-                }
 
-            }
-            return View(stratisAccountModel);
-        }
-*/
+                    }
+                    return View(stratisAccountModel);
+                }
+        */
     }
 
 }

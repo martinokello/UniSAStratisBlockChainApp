@@ -428,13 +428,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/08/2018 12:18:16</publishTime>
     </File>
     <File Include="bin/RSA316Engine.dll">
-      <publishTime>09/26/2020 23:42:39</publishTime>
+      <publishTime>11/08/2020 04:45:14</publishTime>
     </File>
     <File Include="bin/RSA316Engine.dll.config">
       <publishTime>08/01/2020 05:20:58</publishTime>
     </File>
     <File Include="bin/RSA316Engine.pdb">
-      <publishTime>09/26/2020 23:42:39</publishTime>
+      <publishTime>11/08/2020 04:45:14</publishTime>
     </File>
     <File Include="bin/System.AppContext.dll">
       <publishTime>08/12/2020 23:52:57</publishTime>
@@ -754,38 +754,44 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="bin/System.Xml.XPath.XDocument.dll">
       <publishTime>08/12/2020 23:52:57</publishTime>
     </File>
+    <File Include="bin/UniSA.CertificateGenerator3.dll">
+      <publishTime>11/08/2020 14:21:32</publishTime>
+    </File>
+    <File Include="bin/UniSA.CertificateGenerator3.pdb">
+      <publishTime>11/08/2020 14:21:32</publishTime>
+    </File>
     <File Include="bin/UniSA.DataAccess.dll">
-      <publishTime>09/17/2020 03:10:41</publishTime>
+      <publishTime>11/08/2020 04:45:15</publishTime>
     </File>
     <File Include="bin/UniSA.DataAccess.dll.config">
       <publishTime>08/01/2020 11:04:00</publishTime>
     </File>
     <File Include="bin/UniSA.DataAccess.pdb">
-      <publishTime>09/17/2020 03:10:41</publishTime>
+      <publishTime>11/08/2020 04:45:15</publishTime>
     </File>
     <File Include="bin/UniSA.Domain.dll">
-      <publishTime>09/04/2020 08:47:26</publishTime>
+      <publishTime>11/08/2020 04:45:14</publishTime>
     </File>
     <File Include="bin/UniSA.Domain.dll.config">
       <publishTime>08/01/2020 11:04:30</publishTime>
     </File>
     <File Include="bin/UniSA.Domain.pdb">
-      <publishTime>09/04/2020 08:47:26</publishTime>
+      <publishTime>11/08/2020 04:45:14</publishTime>
     </File>
     <File Include="bin/UniSA.Services.dll">
-      <publishTime>09/26/2020 23:42:40</publishTime>
+      <publishTime>11/08/2020 20:43:35</publishTime>
     </File>
     <File Include="bin/UniSA.Services.dll.config">
       <publishTime>08/01/2020 05:21:42</publishTime>
     </File>
     <File Include="bin/UniSA.Services.pdb">
-      <publishTime>09/26/2020 23:42:40</publishTime>
+      <publishTime>11/08/2020 20:43:35</publishTime>
     </File>
     <File Include="bin/UniSAEmloyeeEmployerCertificationAndEngagement.dll">
-      <publishTime>09/27/2020 00:57:59</publishTime>
+      <publishTime>11/09/2020 12:05:57</publishTime>
     </File>
     <File Include="bin/UniSAEmloyeeEmployerCertificationAndEngagement.pdb">
-      <publishTime>09/27/2020 00:57:59</publishTime>
+      <publishTime>11/09/2020 12:05:57</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>01/23/2014 13:57:34</publishTime>
@@ -866,55 +872,85 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>07/24/2020 16:45:06</publishTime>
     </File>
     <File Include="images/avatar.jpg">
-      <publishTime>07/27/2020 17:07:12</publishTime>
+      <publishTime>11/09/2020 09:31:35</publishTime>
     </File>
     <File Include="images/BlockChain.jpg">
-      <publishTime>08/25/2020 05:01:46</publishTime>
+      <publishTime>11/09/2020 09:31:35</publishTime>
+    </File>
+    <File Include="images/Certificates/Certificate1.jpg">
+      <publishTime>11/09/2020 09:31:40</publishTime>
+    </File>
+    <File Include="images/Certificates/Certificate2.jpg">
+      <publishTime>11/09/2020 09:31:39</publishTime>
+    </File>
+    <File Include="images/Certificates/Certificate3.jpg">
+      <publishTime>11/09/2020 09:31:39</publishTime>
+    </File>
+    <File Include="images/Certificates/Certificate4.jpg">
+      <publishTime>11/09/2020 09:31:38</publishTime>
+    </File>
+    <File Include="images/Certificates/Certificate5.jpg">
+      <publishTime>11/09/2020 09:31:38</publishTime>
+    </File>
+    <File Include="images/Certificates/joanne.butt%40gmail.com_JAVASCRIPT CERTIFICATION MVP.jpg">
+      <publishTime>11/09/2020 09:31:38</publishTime>
+    </File>
+    <File Include="images/Certificates/leon.butt%40gmail.com_ASP.NET MVP - 1.jpg">
+      <publishTime>11/09/2020 09:31:37</publishTime>
+    </File>
+    <File Include="images/Certificates/leon.butt%40gmail.com_JAVASCRIPT CERTIFICATION MVP.jpg">
+      <publishTime>11/09/2020 09:31:37</publishTime>
+    </File>
+    <File Include="images/Certificates/leon.butt%40gmail.com_Oracle MVP Certified.jpg">
+      <publishTime>11/09/2020 09:31:36</publishTime>
+    </File>
+    <File Include="images/Certificates/leon.butt%40gmail.com_TYPESCRIPT GURU.jpg">
+      <publishTime>11/09/2020 09:31:36</publishTime>
     </File>
     <File Include="images/logo.jpg">
-      <publishTime>07/27/2020 17:07:12</publishTime>
+      <publishTime>11/09/2020 09:31:35</publishTime>
     </File>
     <File Include="images/pic01.jpg">
-      <publishTime>07/27/2020 17:07:12</publishTime>
+      <publishTime>11/09/2020 09:31:34</publishTime>
     </File>
     <File Include="images/pic02.jpg">
-      <publishTime>07/27/2020 17:07:12</publishTime>
+      <publishTime>11/09/2020 09:31:34</publishTime>
     </File>
     <File Include="images/pic03.jpg">
-      <publishTime>07/27/2020 17:07:12</publishTime>
+      <publishTime>11/09/2020 09:31:33</publishTime>
     </File>
     <File Include="images/pic04.jpg">
-      <publishTime>07/27/2020 17:07:12</publishTime>
+      <publishTime>11/09/2020 09:31:33</publishTime>
     </File>
     <File Include="images/pic05.jpg">
-      <publishTime>07/27/2020 17:07:12</publishTime>
+      <publishTime>11/09/2020 09:31:32</publishTime>
     </File>
     <File Include="images/pic06.jpg">
-      <publishTime>07/27/2020 17:07:12</publishTime>
+      <publishTime>11/09/2020 09:31:32</publishTime>
     </File>
     <File Include="images/pic07.jpg">
-      <publishTime>07/27/2020 17:07:12</publishTime>
+      <publishTime>11/09/2020 09:31:31</publishTime>
     </File>
     <File Include="images/pic08.jpg">
-      <publishTime>07/27/2020 17:07:12</publishTime>
+      <publishTime>11/09/2020 09:31:31</publishTime>
     </File>
     <File Include="images/pic09.jpg">
-      <publishTime>07/27/2020 17:07:12</publishTime>
+      <publishTime>11/09/2020 09:31:31</publishTime>
     </File>
     <File Include="images/pic10.jpg">
-      <publishTime>07/27/2020 17:07:12</publishTime>
+      <publishTime>11/09/2020 09:31:31</publishTime>
     </File>
     <File Include="images/pic11.jpg">
-      <publishTime>07/27/2020 17:07:12</publishTime>
+      <publishTime>11/09/2020 09:31:30</publishTime>
     </File>
     <File Include="images/pic12.jpg">
-      <publishTime>07/27/2020 17:07:12</publishTime>
+      <publishTime>11/09/2020 09:31:30</publishTime>
     </File>
     <File Include="images/StratisLogo.jpg">
-      <publishTime>08/25/2020 05:01:46</publishTime>
+      <publishTime>11/09/2020 09:31:29</publishTime>
     </File>
     <File Include="images/StratisWallet.jpg">
-      <publishTime>08/25/2020 05:01:44</publishTime>
+      <publishTime>11/09/2020 09:31:29</publishTime>
     </File>
     <File Include="README.txt">
       <publishTime>07/27/2020 17:07:12</publishTime>
@@ -941,301 +977,304 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/20/2020 00:54:46</publishTime>
     </File>
     <File Include="Views/Account/ConfirmEmail.cshtml">
-      <publishTime>07/24/2020 16:45:26</publishTime>
+      <publishTime>11/09/2020 09:31:45</publishTime>
     </File>
     <File Include="Views/Account/ExternalLoginConfirmation.cshtml">
-      <publishTime>07/24/2020 16:45:26</publishTime>
+      <publishTime>11/09/2020 09:31:45</publishTime>
     </File>
     <File Include="Views/Account/ExternalLoginFailure.cshtml">
-      <publishTime>07/24/2020 16:45:26</publishTime>
+      <publishTime>11/09/2020 09:31:44</publishTime>
     </File>
     <File Include="Views/Account/ForgotPassword.cshtml">
-      <publishTime>07/24/2020 16:45:26</publishTime>
+      <publishTime>11/09/2020 09:31:44</publishTime>
     </File>
     <File Include="Views/Account/ForgotPasswordConfirmation.cshtml">
-      <publishTime>07/24/2020 16:45:26</publishTime>
+      <publishTime>11/09/2020 09:31:44</publishTime>
     </File>
     <File Include="Views/Account/Login.cshtml">
-      <publishTime>08/19/2020 11:18:28</publishTime>
+      <publishTime>11/09/2020 09:31:43</publishTime>
     </File>
     <File Include="Views/Account/Register.cshtml">
-      <publishTime>09/17/2020 08:18:06</publishTime>
+      <publishTime>11/09/2020 09:31:43</publishTime>
     </File>
     <File Include="Views/Account/ResetPassword.cshtml">
-      <publishTime>07/24/2020 16:45:26</publishTime>
+      <publishTime>11/09/2020 09:31:43</publishTime>
     </File>
     <File Include="Views/Account/ResetPasswordConfirmation.cshtml">
-      <publishTime>07/24/2020 16:45:26</publishTime>
+      <publishTime>11/09/2020 09:31:42</publishTime>
     </File>
     <File Include="Views/Account/SendCode.cshtml">
-      <publishTime>07/24/2020 16:45:26</publishTime>
+      <publishTime>11/09/2020 09:31:42</publishTime>
     </File>
     <File Include="Views/Account/VerifyCode.cshtml">
-      <publishTime>07/24/2020 16:45:26</publishTime>
+      <publishTime>11/09/2020 09:31:41</publishTime>
     </File>
     <File Include="Views/Account/_ExternalLoginsListPartial.cshtml">
-      <publishTime>07/24/2020 16:45:26</publishTime>
+      <publishTime>11/09/2020 09:31:41</publishTime>
     </File>
     <File Include="Views/AccreditationBody/Index.cshtml">
-      <publishTime>08/25/2020 15:30:56</publishTime>
+      <publishTime>11/09/2020 09:31:48</publishTime>
     </File>
     <File Include="Views/AccreditationBody/SelectAccreditMicroCredentialCourse.cshtml">
-      <publishTime>08/22/2020 01:50:08</publishTime>
+      <publishTime>11/09/2020 09:31:47</publishTime>
     </File>
     <File Include="Views/AccreditationBody/SelectEndorseMicroCredentialCourse.cshtml">
-      <publishTime>08/22/2020 01:50:08</publishTime>
+      <publishTime>11/09/2020 09:31:47</publishTime>
     </File>
     <File Include="Views/AccreditationBody/UpdateAccreditMicroCredentialCourse.cshtml">
-      <publishTime>08/22/2020 01:50:08</publishTime>
+      <publishTime>11/09/2020 09:31:47</publishTime>
     </File>
     <File Include="Views/AccreditationBody/UpdateEndorseMicroCredentialCourse.cshtml">
-      <publishTime>08/22/2020 01:50:08</publishTime>
+      <publishTime>11/09/2020 09:31:46</publishTime>
     </File>
     <File Include="Views/Administration/AssignUserToRole.cshtml">
-      <publishTime>09/04/2020 19:18:15</publishTime>
+      <publishTime>11/09/2020 09:32:00</publishTime>
     </File>
     <File Include="Views/Administration/CreateReadUpdateAccreditationBody.cshtml">
-      <publishTime>08/05/2020 09:24:50</publishTime>
+      <publishTime>11/09/2020 09:32:00</publishTime>
     </File>
     <File Include="Views/Administration/CreateReadUpdateAddress.cshtml">
-      <publishTime>08/03/2020 00:26:44</publishTime>
+      <publishTime>11/09/2020 09:31:59</publishTime>
     </File>
     <File Include="Views/Administration/CreateReadUpdateCandidate.cshtml">
-      <publishTime>08/06/2020 12:51:02</publishTime>
+      <publishTime>11/09/2020 09:31:59</publishTime>
     </File>
     <File Include="Views/Administration/CreateReadUpdateEmployer.cshtml">
-      <publishTime>08/04/2020 18:38:26</publishTime>
+      <publishTime>11/09/2020 09:31:59</publishTime>
     </File>
     <File Include="Views/Administration/CreateReadUpdateEndorsementBody.cshtml">
-      <publishTime>08/05/2020 09:58:00</publishTime>
+      <publishTime>11/09/2020 09:31:58</publishTime>
     </File>
     <File Include="Views/Administration/CreateReadUpdateJob.cshtml">
-      <publishTime>09/01/2020 21:32:20</publishTime>
+      <publishTime>11/09/2020 09:31:58</publishTime>
     </File>
     <File Include="Views/Administration/CreateReadUpdateMicroCredential.cshtml">
-      <publishTime>08/20/2020 02:15:18</publishTime>
+      <publishTime>11/09/2020 09:31:57</publishTime>
     </File>
     <File Include="Views/Administration/CreateReadUpdateMoocProvider.cshtml">
-      <publishTime>08/04/2020 18:40:48</publishTime>
+      <publishTime>11/09/2020 09:31:57</publishTime>
     </File>
     <File Include="Views/Administration/CreateReadUpdateUserGovernment.cshtml">
-      <publishTime>08/02/2020 09:18:26</publishTime>
+      <publishTime>11/09/2020 09:31:57</publishTime>
     </File>
     <File Include="Views/Administration/CreateReadUpdateUserMicroCredentialBadge.cshtml">
-      <publishTime>08/06/2020 10:36:44</publishTime>
+      <publishTime>11/09/2020 09:31:56</publishTime>
     </File>
     <File Include="Views/Administration/CreateReadUpdateUserRecruitmentAgent.cshtml">
-      <publishTime>08/07/2020 14:20:56</publishTime>
+      <publishTime>11/09/2020 09:31:55</publishTime>
+    </File>
+    <File Include="Views/Administration/GenerateUserCandidateCertificate.cshtml">
+      <publishTime>11/09/2020 09:31:56</publishTime>
     </File>
     <File Include="Views/Administration/Index.cshtml">
-      <publishTime>08/25/2020 15:30:56</publishTime>
+      <publishTime>11/09/2020 09:31:55</publishTime>
     </File>
     <File Include="Views/Administration/ManageStratisAccountView.cshtml">
-      <publishTime>08/27/2020 02:22:24</publishTime>
+      <publishTime>11/09/2020 09:31:54</publishTime>
     </File>
     <File Include="Views/Administration/SelectDeleteAccreditationBody.cshtml">
-      <publishTime>08/05/2020 09:25:06</publishTime>
+      <publishTime>11/09/2020 09:31:55</publishTime>
     </File>
     <File Include="Views/Administration/SelectDeleteAddress.cshtml">
-      <publishTime>07/31/2020 15:26:08</publishTime>
+      <publishTime>11/09/2020 09:31:53</publishTime>
     </File>
     <File Include="Views/Administration/SelectDeleteCandidate.cshtml">
-      <publishTime>08/07/2020 14:08:24</publishTime>
+      <publishTime>11/09/2020 09:31:53</publishTime>
     </File>
     <File Include="Views/Administration/SelectDeleteEmployer.cshtml">
-      <publishTime>08/05/2020 08:57:18</publishTime>
+      <publishTime>11/09/2020 09:31:52</publishTime>
     </File>
     <File Include="Views/Administration/SelectDeleteEndorsementBody.cshtml">
-      <publishTime>08/05/2020 10:23:42</publishTime>
+      <publishTime>11/09/2020 09:31:52</publishTime>
     </File>
     <File Include="Views/Administration/SelectDeleteJob.cshtml">
-      <publishTime>09/01/2020 21:32:20</publishTime>
+      <publishTime>11/09/2020 09:31:52</publishTime>
     </File>
     <File Include="Views/Administration/SelectDeleteMicroCredential.cshtml">
-      <publishTime>08/20/2020 02:15:18</publishTime>
+      <publishTime>11/09/2020 09:31:51</publishTime>
     </File>
     <File Include="Views/Administration/SelectDeleteMoocProvider.cshtml">
-      <publishTime>07/31/2020 15:25:24</publishTime>
+      <publishTime>11/09/2020 09:31:51</publishTime>
     </File>
     <File Include="Views/Administration/SelectDeleteUserGovernment.cshtml">
-      <publishTime>08/02/2020 09:14:40</publishTime>
+      <publishTime>11/09/2020 09:31:50</publishTime>
     </File>
     <File Include="Views/Administration/SelectDeleteUserMicroCredentialBadge.cshtml">
-      <publishTime>08/06/2020 10:36:44</publishTime>
+      <publishTime>11/09/2020 09:31:50</publishTime>
     </File>
     <File Include="Views/Administration/SelectDeleteUserRecruitmentAgent .cshtml">
-      <publishTime>08/08/2020 01:22:52</publishTime>
+      <publishTime>11/09/2020 09:31:49</publishTime>
     </File>
     <File Include="Views/Administration/SelectStratisAccount.cshtml">
-      <publishTime>09/04/2020 09:05:46</publishTime>
+      <publishTime>11/09/2020 09:31:49</publishTime>
     </File>
     <File Include="Views/Administration/UpdateStratisAccount.cshtml">
-      <publishTime>08/27/2020 03:52:56</publishTime>
+      <publishTime>11/09/2020 09:31:49</publishTime>
     </File>
     <File Include="Views/Candidate/ApplyForJob.cshtml">
-      <publishTime>09/26/2020 10:25:05</publishTime>
+      <publishTime>11/09/2020 09:32:04</publishTime>
     </File>
     <File Include="Views/Candidate/CandidateBadgesView.cshtml">
-      <publishTime>08/20/2020 02:26:26</publishTime>
+      <publishTime>11/09/2020 11:45:47</publishTime>
     </File>
     <File Include="Views/Candidate/CandidateJobList.cshtml">
-      <publishTime>09/26/2020 11:49:56</publishTime>
+      <publishTime>11/09/2020 09:32:03</publishTime>
     </File>
     <File Include="Views/Candidate/EnroleForMicroCredential.cshtml">
-      <publishTime>08/20/2020 03:02:40</publishTime>
+      <publishTime>11/09/2020 09:32:02</publishTime>
     </File>
     <File Include="Views/Candidate/Index.cshtml">
-      <publishTime>08/25/2020 15:30:56</publishTime>
+      <publishTime>11/09/2020 09:32:02</publishTime>
     </File>
     <File Include="Views/Candidate/ValidateUserMicroCredential.cshtml">
-      <publishTime>08/20/2020 04:38:26</publishTime>
+      <publishTime>11/09/2020 09:32:01</publishTime>
     </File>
     <File Include="Views/Candidate/ViewUserMicroCredentialBadges.cshtml">
-      <publishTime>08/08/2020 11:57:38</publishTime>
+      <publishTime>11/09/2020 09:32:01</publishTime>
     </File>
     <File Include="Views/Employer/EmployerCreateJob.cshtml">
-      <publishTime>09/04/2020 08:54:03</publishTime>
+      <publishTime>11/09/2020 09:32:07</publishTime>
     </File>
     <File Include="Views/Employer/EmployerJobList.cshtml">
-      <publishTime>08/09/2020 12:18:44</publishTime>
+      <publishTime>11/09/2020 09:32:06</publishTime>
     </File>
     <File Include="Views/Employer/GetJobsByEmployerId.cshtml">
-      <publishTime>08/22/2020 00:44:56</publishTime>
+      <publishTime>11/09/2020 09:32:06</publishTime>
     </File>
     <File Include="Views/Employer/Index.cshtml">
-      <publishTime>08/25/2020 15:30:56</publishTime>
+      <publishTime>11/09/2020 09:32:05</publishTime>
     </File>
     <File Include="Views/Employer/SelectEmployerJob.cshtml">
-      <publishTime>09/26/2020 10:15:33</publishTime>
+      <publishTime>11/09/2020 09:32:05</publishTime>
     </File>
     <File Include="Views/Employer/UpdateEmployerJob.cshtml">
-      <publishTime>09/01/2020 21:33:13</publishTime>
+      <publishTime>11/09/2020 09:32:05</publishTime>
     </File>
     <File Include="Views/Employer/ValidateCandidateMicroCredential.cshtml">
-      <publishTime>08/22/2020 00:56:30</publishTime>
+      <publishTime>11/09/2020 09:32:04</publishTime>
     </File>
     <File Include="Views/EndorsementBody/Index.cshtml">
-      <publishTime>08/25/2020 15:30:56</publishTime>
+      <publishTime>11/09/2020 09:32:08</publishTime>
     </File>
     <File Include="Views/EndorsementBody/SelectEndorseMicroCredentialCourse.cshtml">
-      <publishTime>08/22/2020 01:50:08</publishTime>
+      <publishTime>11/09/2020 09:32:08</publishTime>
     </File>
     <File Include="Views/EndorsementBody/UpdateEndorseMicroCredentialCourse.cshtml">
-      <publishTime>08/22/2020 01:50:08</publishTime>
+      <publishTime>11/09/2020 09:32:07</publishTime>
     </File>
     <File Include="Views/Error/Error.cshtml">
-      <publishTime>08/25/2020 20:46:30</publishTime>
+      <publishTime>11/09/2020 09:32:09</publishTime>
     </File>
     <File Include="Views/Government/CreateReadUpdateUserGovernment.cshtml">
-      <publishTime>09/16/2020 08:55:56</publishTime>
+      <publishTime>11/09/2020 09:32:10</publishTime>
     </File>
     <File Include="Views/Government/Index.cshtml">
-      <publishTime>08/25/2020 15:30:56</publishTime>
+      <publishTime>11/09/2020 09:32:10</publishTime>
     </File>
     <File Include="Views/Government/SelectDeleteUserGovernment.cshtml">
-      <publishTime>09/16/2020 08:55:56</publishTime>
+      <publishTime>11/09/2020 09:32:10</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
-      <publishTime>07/29/2020 23:44:56</publishTime>
+      <publishTime>11/09/2020 09:32:12</publishTime>
     </File>
     <File Include="Views/Home/Contact.cshtml">
-      <publishTime>07/29/2020 23:44:56</publishTime>
+      <publishTime>11/09/2020 09:32:12</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>08/25/2020 15:30:56</publishTime>
+      <publishTime>11/09/2020 09:32:11</publishTime>
     </File>
     <File Include="Views/Manage/AddPhoneNumber.cshtml">
-      <publishTime>07/24/2020 16:45:26</publishTime>
+      <publishTime>11/09/2020 09:32:15</publishTime>
     </File>
     <File Include="Views/Manage/ChangePassword.cshtml">
-      <publishTime>07/24/2020 16:45:26</publishTime>
+      <publishTime>11/09/2020 09:32:15</publishTime>
     </File>
     <File Include="Views/Manage/Index.cshtml">
-      <publishTime>07/24/2020 16:45:26</publishTime>
+      <publishTime>11/09/2020 09:32:14</publishTime>
     </File>
     <File Include="Views/Manage/ManageLogins.cshtml">
-      <publishTime>07/24/2020 16:45:26</publishTime>
+      <publishTime>11/09/2020 09:32:14</publishTime>
     </File>
     <File Include="Views/Manage/SetPassword.cshtml">
-      <publishTime>07/24/2020 16:45:26</publishTime>
+      <publishTime>11/09/2020 09:32:13</publishTime>
     </File>
     <File Include="Views/Manage/VerifyPhoneNumber.cshtml">
-      <publishTime>07/24/2020 16:45:26</publishTime>
+      <publishTime>11/09/2020 09:32:13</publishTime>
     </File>
     <File Include="Views/MoocProvider/CreateMicroCredential.cshtml">
-      <publishTime>08/20/2020 15:45:18</publishTime>
+      <publishTime>11/09/2020 09:32:19</publishTime>
     </File>
     <File Include="Views/MoocProvider/CreateUserMicroCredentialBadge.cshtml">
-      <publishTime>08/20/2020 05:57:08</publishTime>
+      <publishTime>11/09/2020 09:32:18</publishTime>
     </File>
     <File Include="Views/MoocProvider/EnroleUserToCourse.cshtml">
-      <publishTime>08/16/2020 08:05:10</publishTime>
+      <publishTime>11/09/2020 09:32:18</publishTime>
     </File>
     <File Include="Views/MoocProvider/Index.cshtml">
-      <publishTime>09/04/2020 11:36:49</publishTime>
+      <publishTime>11/09/2020 09:32:18</publishTime>
     </File>
     <File Include="Views/MoocProvider/MoocProviderCertifyUser.cshtml">
-      <publishTime>08/20/2020 05:16:54</publishTime>
+      <publishTime>11/09/2020 09:32:17</publishTime>
     </File>
     <File Include="Views/MoocProvider/SelectMicroCredential.cshtml">
-      <publishTime>08/20/2020 14:47:56</publishTime>
+      <publishTime>11/09/2020 09:32:17</publishTime>
     </File>
     <File Include="Views/MoocProvider/UpdateMicroCredential.cshtml">
-      <publishTime>08/20/2020 15:45:18</publishTime>
+      <publishTime>11/09/2020 09:32:17</publishTime>
     </File>
     <File Include="Views/MoocProvider/ValidateCandidateMicroCredential.cshtml">
-      <publishTime>08/20/2020 04:28:56</publishTime>
+      <publishTime>11/09/2020 09:32:16</publishTime>
     </File>
     <File Include="Views/MoocProvider/ViewUserMicroCredentialBadges.cshtml">
-      <publishTime>08/20/2020 17:43:26</publishTime>
+      <publishTime>11/09/2020 12:02:54</publishTime>
     </File>
     <File Include="Views/RecruitmentAgent/.editorconfig">
-      <publishTime>09/16/2020 08:40:22</publishTime>
+      <publishTime>11/09/2020 09:32:21</publishTime>
     </File>
     <File Include="Views/RecruitmentAgent/CreateReadUpdateUserRecruitmentAgent.cshtml">
-      <publishTime>09/16/2020 08:48:57</publishTime>
+      <publishTime>11/09/2020 09:32:20</publishTime>
     </File>
     <File Include="Views/RecruitmentAgent/Index.cshtml">
-      <publishTime>08/25/2020 15:30:56</publishTime>
+      <publishTime>11/09/2020 09:32:20</publishTime>
     </File>
     <File Include="Views/RecruitmentAgent/SelectDeleteUserRecruitmentAgent .cshtml">
-      <publishTime>09/16/2020 08:48:57</publishTime>
+      <publishTime>11/09/2020 09:32:20</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
-      <publishTime>07/29/2020 23:49:30</publishTime>
+      <publishTime>11/09/2020 09:32:26</publishTime>
     </File>
     <File Include="Views/Shared/Failed.cshtml">
-      <publishTime>07/29/2020 23:49:30</publishTime>
+      <publishTime>11/09/2020 09:32:26</publishTime>
     </File>
     <File Include="Views/Shared/Lockout.cshtml">
-      <publishTime>07/24/2020 16:45:26</publishTime>
+      <publishTime>11/09/2020 09:32:26</publishTime>
     </File>
     <File Include="Views/Shared/Success.cshtml">
-      <publishTime>07/29/2020 23:49:30</publishTime>
+      <publishTime>11/09/2020 09:32:25</publishTime>
     </File>
     <File Include="Views/Shared/_BlockChainBannerImages.cshtml">
-      <publishTime>08/25/2020 15:34:08</publishTime>
+      <publishTime>11/09/2020 09:32:24</publishTime>
     </File>
     <File Include="Views/Shared/_CandidateMicroCredentialBadges.cshtml">
-      <publishTime>08/20/2020 15:53:38</publishTime>
+      <publishTime>11/09/2020 09:32:23</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>09/26/2020 12:49:36</publishTime>
+      <publishTime>11/09/2020 09:32:23</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
-      <publishTime>07/24/2020 16:45:26</publishTime>
+      <publishTime>11/09/2020 09:32:25</publishTime>
     </File>
     <File Include="Views/Shared/_StratisAccountView.cshtml">
-      <publishTime>09/04/2020 09:04:52</publishTime>
+      <publishTime>11/09/2020 09:32:21</publishTime>
     </File>
     <File Include="Views/Web.config">
-      <publishTime>07/24/2020 16:45:06</publishTime>
+      <publishTime>11/09/2020 09:31:40</publishTime>
     </File>
     <File Include="Views/_ViewStart.cshtml">
-      <publishTime>07/24/2020 16:45:06</publishTime>
+      <publishTime>11/09/2020 09:31:40</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>09/26/2020 09:06:58</publishTime>
+      <publishTime>11/08/2020 04:45:20</publishTime>
     </File>
   </ItemGroup>
 </Project>

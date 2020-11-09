@@ -240,6 +240,11 @@ namespace UniSA.Services.RepositoryServices
             _unitOfWork.SaveChanges();
         }
 
+        public UserMicroCredentialBadges GetUserMicroCredentialBadgesById(int candidateId, int microCredentialId)
+        {
+            return _unitOfWork.CandidatetMicroCredentialBadgesRepository.GetAll().FirstOrDefault(q => q.CandidateId == candidateId && q.MicroCredentialId == microCredentialId);
+        }
+
         public void InsertEmployer(Employer employer)
         {
             _unitOfWork.EmployerRepository.Add(employer);

@@ -157,7 +157,7 @@ namespace UniSAEmloyeeEmployerCertificationAndEngagement.Controllers
                 jpgCertificateImage.InputStream.Dispose();
                 inputStream.Dispose();
                 certGenerator.ImageTextMerge(certBytes, userCredentialPath, model.CertificateTextContent.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries),
-                  30, 80, 800, 425, 800, 425);
+                  240, 320, 800, 425, 800, 425);
 
                 return View("Success");
             }

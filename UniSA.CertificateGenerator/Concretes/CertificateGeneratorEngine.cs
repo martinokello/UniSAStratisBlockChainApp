@@ -27,7 +27,7 @@ namespace UniSA.CertificateGenerator
                         canvas.DrawImage(imgBack, new Rectangle(0, 0, width, height), new Rectangle(0, 0, width, height), GraphicsUnit.Pixel);
 
                         // Create font and brush
-                        Font drawFont = new Font("Arial", 7);
+                        Font drawFont = new Font("Arial", 13);
                         SolidBrush drawBrush = new SolidBrush(Color.Black);
 
                         // Create rectangle for drawing. 

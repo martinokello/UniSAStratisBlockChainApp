@@ -11,6 +11,8 @@ namespace UniSAEmloyeeEmployerCertificationAndEngagement.Models
     public class CertificateCreationViewModel
     {
         [Required]
+        public string mergeContent { get; set; }
+        [Required]
         [Range(1, int.MaxValue, ErrorMessage = "Please Select an Item From Menu above")]
         public int CandidateId { get; set; }
         [Required]

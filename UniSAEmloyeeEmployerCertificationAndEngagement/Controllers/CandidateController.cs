@@ -170,7 +170,7 @@ namespace UniSAEmloyeeEmployerCertificationAndEngagement.Controllers
         {
             var candidateBadges = _repositoryEndPointService.GetCandidateDigitalBadgesByEmail(candidateEmail);
 
-            ViewBag.CertificateImageUrl = candidateBadges.Select(p => "/images/Certificates/" + candidateEmail + "_" + p.MicroCredentialBadges + ".jpg").ToArray();
+            ViewBag.CertificateImageUrl = candidateBadges.Select(p => "/images/Badges/" + candidateEmail + "_" + p.MicroCredentialBadges + ".jpg").ToArray();
 
             return View("CandidateBadgesView", candidateBadges);
         }
@@ -181,7 +181,7 @@ namespace UniSAEmloyeeEmployerCertificationAndEngagement.Controllers
         {
             var candidateBadges = _repositoryEndPointService.GetCandidateDigitalBadgesByEmail(User.Identity.Name);
 
-            ViewBag.CertificateImageUrl = candidateBadges.Select(p => "/images/Certificates/"+User.Identity.Name+"_"+p.MicroCredentialBadges+".jpg").ToArray();
+            ViewBag.CertificateImageUrl = candidateBadges.Select(p => "/images/Badges/" + User.Identity.Name+"_"+p.MicroCredentialBadges+".jpg").ToArray();
             return PartialView("_CandidateMicroCredentialBadges", candidateBadges);
         }
         [HttpGet]
@@ -252,7 +252,7 @@ namespace UniSAEmloyeeEmployerCertificationAndEngagement.Controllers
             if (user != null)
             {
                 UserMicroCredentialBadges[] microCredentialBadges = _repositoryEndPointService.GetUserMicroCredentialBadgesById(user.CandidateId);
-                ViewBag.CertificateImageUrl = microCredentialBadges.Select(p => "/images/Certificates/" + User.Identity.Name + "_" + p.MicroCredentialBadges + ".jpg").ToArray();
+                ViewBag.CertificateImageUrl = microCredentialBadges.Select(p => "/images/Badges/" + User.Identity.Name + "_" + p.MicroCredentialBadges + ".jpg").ToArray();
                 var listOfUserBadges = new List<MicroCredentialBadgeWithMicroCredentialNameViewModel>();
 
                 foreach (var mb in microCredentialBadges)

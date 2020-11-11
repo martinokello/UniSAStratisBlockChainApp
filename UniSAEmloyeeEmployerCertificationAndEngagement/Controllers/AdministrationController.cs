@@ -20,7 +20,9 @@ using UniSA.Services.StratisBlockChainServices.Providers;
 using UniSA.Services.StratisBlockChainServices.StratisApi;
 using UniSA.Services.UnitOfWork;
 using UniSAEmloyeeEmployerCertificationAndEngagement.App_Start;
+using UniSAEmloyeeEmployerCertificationAndEngagement.Infrastructure;
 using UniSAEmloyeeEmployerCertificationAndEngagement.Models;
+using static UniSA.CertificateGenerator.CertificateGeneratorEngine;
 
 namespace UniSAEmloyeeEmployerCertificationAndEngagement.Controllers
 {
@@ -122,6 +124,7 @@ namespace UniSAEmloyeeEmployerCertificationAndEngagement.Controllers
             initItem.AddRange(_unitOfWork.RecruitmentAgencyRepository.GetAll().Select(a => new SelectListItem { Text = a.RecruitmentAgencyName, Value = a.RecruitmentAgencyId.ToString() }).ToList());
             return initItem;
         }
+
         [HttpGet]
         public ActionResult GenerateUserCandidateCertificate()
         {
@@ -131,7 +134,7 @@ namespace UniSAEmloyeeEmployerCertificationAndEngagement.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult GenerateUserCandidateCertificate(CertificateCreationViewModel model, HttpPostedFileBase jpgCertificateImage)
+        public ActionResult GenerateUserCandidateCertificate(CertificateCreationViewModel model, HttpPostedFileBase jpgCertificateImage, int mergeContent = 0)
         {
             ViewBag.CandidateIdList = GetCandidateIds();
             ViewBag.MicroCredentialIdList = GetMicroCredentialIds();
@@ -145,7 +148,9 @@ namespace UniSAEmloyeeEmployerCertificationAndEngagement.Controllers
                 var candidate = _repositoryEndPointService.GetCandidateById(model.CandidateId);
                 var microCredential = _repositoryEndPointService.GetMicroCredentialById(model.MicroCredentialId);
                 var badge = _repositoryEndPointService.GetUserMicroCredentialBadgesByBadgeId(model.MicroCredentialBadgeId);
-                var userCredentialPath = Server.MapPath($"~/images/Certificates/{candidate.EmailAddress + "_" + badge.MicroCredentialBadges}.jpg");
+
+                MergeContent.MergeContentType contentType = (MergeContent.MergeContentType)mergeContent;
+                var userCredentialPath = Server.MapPath($"~/images/{contentType.ToString()}/{candidate.EmailAddress + "_" + badge.MicroCredentialBadges}.jpg");
 
                 byte[] certBytes = new byte[jpgCertificateImage.ContentLength];
 
@@ -156,8 +161,17 @@ namespace UniSAEmloyeeEmployerCertificationAndEngagement.Controllers
                 jpgCertificateImage.InputStream.Close();
                 jpgCertificateImage.InputStream.Dispose();
                 inputStream.Dispose();
-                certGenerator.ImageTextMerge(certBytes, userCredentialPath, model.CertificateTextContent.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries),
-                  240, 320, 800, 425, 800, 425);
+                switch (contentType)
+                {
+                    case MergeContent.MergeContentType.Badges:
+                        certGenerator.ImageTextMerge(certBytes, userCredentialPath, model.CertificateTextContent.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries), Color.White,
+                          20, 50, 800, 425, 800, 425);
+                        break;
+                    case MergeContent.MergeContentType.Certificates:
+                        certGenerator.ImageTextMerge(certBytes, userCredentialPath, model.CertificateTextContent.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries), Color.Black,
+                          240, 320, 800, 425, 800, 425);
+                        break;
+                }
 
                 return View("Success");
             }

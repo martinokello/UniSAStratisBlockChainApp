@@ -755,10 +755,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/12/2020 23:52:57</publishTime>
     </File>
     <File Include="bin/UniSA.CertificateGenerator3.dll">
-      <publishTime>11/10/2020 20:46:05</publishTime>
+      <publishTime>11/11/2020 09:57:45</publishTime>
     </File>
     <File Include="bin/UniSA.CertificateGenerator3.pdb">
-      <publishTime>11/10/2020 20:46:05</publishTime>
+      <publishTime>11/11/2020 09:57:45</publishTime>
     </File>
     <File Include="bin/UniSA.DataAccess.dll">
       <publishTime>11/08/2020 04:45:15</publishTime>
@@ -788,10 +788,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/08/2020 20:43:35</publishTime>
     </File>
     <File Include="bin/UniSAEmloyeeEmployerCertificationAndEngagement.dll">
-      <publishTime>11/10/2020 20:46:08</publishTime>
+      <publishTime>11/11/2020 09:57:48</publishTime>
     </File>
     <File Include="bin/UniSAEmloyeeEmployerCertificationAndEngagement.pdb">
-      <publishTime>11/10/2020 20:46:08</publishTime>
+      <publishTime>11/11/2020 09:57:48</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>01/23/2014 13:57:34</publishTime>
@@ -874,6 +874,12 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="images/avatar.jpg">
       <publishTime>11/09/2020 09:31:35</publishTime>
     </File>
+    <File Include="images/Badges/leon.butt%40gmail.com_Oracle MVP Certified.jpg">
+      <publishTime>11/11/2020 09:55:23</publishTime>
+    </File>
+    <File Include="images/Badges/UniSaBadgeTemplateExample.jpg">
+      <publishTime>11/11/2020 09:44:57</publishTime>
+    </File>
     <File Include="images/BlockChain.jpg">
       <publishTime>11/09/2020 09:31:35</publishTime>
     </File>
@@ -902,10 +908,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/09/2020 09:31:37</publishTime>
     </File>
     <File Include="images/Certificates/leon.butt%40gmail.com_JAVASCRIPT CERTIFICATION MVP.jpg">
-      <publishTime>11/09/2020 09:31:37</publishTime>
+      <publishTime>11/11/2020 07:34:07</publishTime>
     </File>
     <File Include="images/Certificates/leon.butt%40gmail.com_Oracle MVP Certified.jpg">
-      <publishTime>11/10/2020 20:41:39</publishTime>
+      <publishTime>11/11/2020 07:35:37</publishTime>
     </File>
     <File Include="images/Certificates/leon.butt%40gmail.com_TYPESCRIPT GURU.jpg">
       <publishTime>11/10/2020 20:43:36</publishTime>
@@ -1067,7 +1073,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/09/2020 09:31:55</publishTime>
     </File>
     <File Include="Views/Administration/GenerateUserCandidateCertificate.cshtml">
-      <publishTime>11/09/2020 09:31:56</publishTime>
+      <publishTime>11/11/2020 09:38:59</publishTime>
     </File>
     <File Include="Views/Administration/Index.cshtml">
       <publishTime>11/09/2020 09:31:55</publishTime>
@@ -1118,7 +1124,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/09/2020 09:32:04</publishTime>
     </File>
     <File Include="Views/Candidate/CandidateBadgesView.cshtml">
-      <publishTime>11/09/2020 11:45:47</publishTime>
+      <publishTime>11/11/2020 06:33:13</publishTime>
     </File>
     <File Include="Views/Candidate/CandidateJobList.cshtml">
       <publishTime>11/09/2020 09:32:03</publishTime>
@@ -1133,7 +1139,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/09/2020 09:32:01</publishTime>
     </File>
     <File Include="Views/Candidate/ViewUserMicroCredentialBadges.cshtml">
-      <publishTime>11/09/2020 09:32:01</publishTime>
+      <publishTime>11/11/2020 07:01:04</publishTime>
     </File>
     <File Include="Views/Employer/EmployerCreateJob.cshtml">
       <publishTime>11/09/2020 09:32:07</publishTime>
@@ -1229,7 +1235,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/09/2020 09:32:16</publishTime>
     </File>
     <File Include="Views/MoocProvider/ViewUserMicroCredentialBadges.cshtml">
-      <publishTime>11/09/2020 12:02:54</publishTime>
+      <publishTime>11/11/2020 07:06:47</publishTime>
     </File>
     <File Include="Views/RecruitmentAgent/.editorconfig">
       <publishTime>11/09/2020 09:32:21</publishTime>

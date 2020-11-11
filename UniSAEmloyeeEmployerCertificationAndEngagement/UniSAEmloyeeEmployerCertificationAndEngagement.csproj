@@ -216,6 +216,7 @@
     <Compile Include="Controllers\EndorsementBodyController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Infrastructure\ErrorHandlingFilter.cs" />
+    <Compile Include="Infrastructure\MergeContent.cs" />
     <Compile Include="Models\AddressViewModel.cs" />
     <Compile Include="Controllers\AdministrationController.cs" />
     <Compile Include="Controllers\CandidateController.cs" />
@@ -294,6 +295,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\Badges\leon.butt%40gmail.com_Oracle MVP Certified.jpg" />
+    <Content Include="images\Badges\UniSaBadgeTemplateExample.jpg" />
     <Content Include="images\BlockChain.jpg" />
     <Content Include="images\Certificates\Certificate1.jpg" />
     <Content Include="images\Certificates\Certificate2.jpg" />
@@ -301,8 +304,8 @@
     <Content Include="images\Certificates\Certificate4.jpg" />
     <Content Include="images\Certificates\Certificate5.jpg" />
     <Content Include="images\Certificates\Certificate6.jpg" />
+    <Content Include="images\Certificates\leon.butt%40gmail.com_JAVASCRIPT CERTIFICATION MVP.jpg" />
     <Content Include="images\Certificates\leon.butt%40gmail.com_Oracle MVP Certified.jpg" />
-    <Content Include="images\Certificates\leon.butt%40gmail.com_TYPESCRIPT GURU.jpg" />
     <Content Include="images\StratisWallet.jpg" />
     <Content Include="images\StratisLogo.jpg" />
     <Content Include="images\avatar.jpg" />

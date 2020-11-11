@@ -13,7 +13,7 @@ namespace UniSA.CertificateGenerator
 {
     public class CertificateGeneratorEngine : IMergeImageAndText
     {
-        public void ImageTextMerge(byte[] inputBytes, string fileName, string[] str, int x, int y, int w, int h, int width = 200, int height = 200)
+        public void ImageTextMerge(byte[] inputBytes, string fileName, string[] str, Color textColor, int x, int y, int w, int h, int width = 200, int height = 200)
         {
             try
             {
@@ -28,7 +28,7 @@ namespace UniSA.CertificateGenerator
 
                         // Create font and brush
                         Font drawFont = new Font("Arial", 13);
-                        SolidBrush drawBrush = new SolidBrush(Color.Black);
+                        SolidBrush drawBrush = new SolidBrush(textColor);
 
                         // Create rectangle for drawing. 
                         RectangleF drawRect = new RectangleF(x, y, w, h);

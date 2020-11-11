@@ -41,3 +41,4 @@ C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\obj\Debug\Un
 C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\obj\Debug\UniSA.Domain.csproj.CopyComplete
 C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\obj\Debug\UniSA.Domain.dll
 C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\obj\Debug\UniSA.Domain.pdb
+C:\UniSAMoocBlockChain27-08-2020V2\UniSAMoocBlockChain\UniSA.Domain\obj\Debug\UniSA.Domain.csprojAssemblyReference.cache

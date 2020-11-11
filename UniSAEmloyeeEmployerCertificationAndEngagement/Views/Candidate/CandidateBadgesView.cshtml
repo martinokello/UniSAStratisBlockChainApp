@@ -8,44 +8,43 @@
     <div style="padding:10px !important;">
         <h2>Candidate Badges View</h2>
 
-        <table class="table">
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.CandidateId)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Username)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.MicroCredentialBadges)
-                </th>
-                <th>Certificate Badge Thumbnail</th>
-                <th></th>
-            </tr>
+        <div class="table">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h4>@Html.DisplayNameFor(model => model.Username)</h4>
+                </div>
+                <div class="col-lg-4">
+                    <h4>@Html.DisplayNameFor(model => model.MicroCredentialBadges)</h4>
+                </div>
+                <div class="col-lg-4">
+                    <h4>Certificate Badge Thumbnail</h4><div></div>
+                </div>
+            </div>
 
             @foreach (var item in Model)
             {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.CandidateId)
-                    </td>
-                    <td>
+                <div>
+                    @Html.HiddenFor(modelItem => item.CandidateId)
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
                         @Html.DisplayFor(modelItem => item.Username)
-                    </td>
-                    <td>
+                    </div>
+                    <div class="col-lg-4">
                         @Html.DisplayFor(modelItem => item.MicroCredentialBadges)
-                    </td>
-                    <td>
-                        @{                             
+                    </div>
+                    <div class="col-lg-4">
+                        @{
                             var certUrl = (ViewBag.CertificateImageUrl as string[]).FirstOrDefault(q => q.Contains(item.MicroCredentialBadges));
 
-                            <h6>Click Certificate Thumbnail, To Download Certificate</h6>
-                            <a href="@certUrl"><img src="@certUrl" alt="Certificate for @item.MicroCredentialBadges" style="width:20%; height:auto;" /></a>
+                            <a href="@certUrl"><img src="@certUrl" alt="Certificate for @item.MicroCredentialBadges" style="width:90%; height:auto;margin:auto;" /></a>
 
                         }
-                    </td>
-                </tr>
+                    </div>
+                </div>
+
+                <div style="width:80%";margin:auto;><hr /></div>
             }
 
-        </table>
+        </div>
     </div>
